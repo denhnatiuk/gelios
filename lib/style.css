@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/*!
+Theme Name: markup
+Theme URI: https://github.com/DenysHnatiuk/cv/
+Author: Den Hnatiuk
+Author URI: https://denyshnatiuk.github.io/geliostrans/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: markup
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+*/
+body{
+    --brand-color-main: #b22222; //firebrick
+    --brand-color-dark: black;
+    --brand-color-light: white;
+
+    --brand-color-shade:#222; //darkgray
+    --brand-color-background: rgba(64,64,64,1);
+    --brand-color-accent:#778899;//lightslate gray
+    --brand-color-text: whitesmoke;
+
+    --theme-color-main: var(--brand-color-main);
+    --theme-color-dark: var(--brand-color-dark);
+    --theme-color-light: var(brand-color-light);
+
+    --theme-color-shade: var(--brand-color-shade);
+    --theme-color-background: var(--brand-color-background);
+    --theme-color-accent: var(--brand-color-accent);
+    --theme-color-text: var(--brand-color-text);
+}
+body.theme-dark{
+        --theme-color-main: var(--brand-color-main);
+        --theme-color-dark: var(--brand-color-dark);
+        --theme-color-light: var(--brand-color-light);
+
+        --theme-color-shade: var(--brand-color-shade);
+        --theme-color-background: var(--brand-color-background);
+        --theme-color-accent: var(--brand-color-accent);
+        --theme-color-text: var(--brand-color-text);
+}
+body.theme-light{
+        --theme-color-main: var(--brand-color-main, coral);
+        --theme-color-dark: var(--brand-color-light);
+        --theme-color-light: var(--brand-color-dark);
+
+        --theme-color-shade: var(--brand-color-accent);
+        --theme-color-background: var(--brand-color-light);
+        --theme-color-accent: var(--brand-color-text);
+        --theme-color-text: var(--brand-color-dark);
+}
+
+body{
+    background-color: var(--theme-color-background, rgba(64,64,64,1));
+    color: var(--theme-color-text,  whitesmoke);
+    --primary: var(--theme-color-main, coral);
+}
+
+.backdrop{
+  position:absolute; top:-10%;right:-10%;z-index:-1;width:80%
+}
