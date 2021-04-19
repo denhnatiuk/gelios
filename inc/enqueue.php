@@ -11,7 +11,7 @@ add_action( 'wp_enqueue_scripts', 'gelios_scripts' );
 function gelios_scripts() {
     $css_version = $VERSION.'.'.filemtime( get_template_directory().'/assets/css/main.css');
 	wp_enqueue_style( 'styles', get_stylesheet_uri(), array(), $css_version);
-	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/lib/bootstrap/dist/css/bootstrap.min.css', array(), $css_version);
+	// wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/lib/bootstrap/dist/css/bootstrap.min.css', array(), $css_version);
 	// wp_style_add_data( 'geliostrans-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/lib/jquery/dist/jquery.min.js', array(),  $css_version, true );

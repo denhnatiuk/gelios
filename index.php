@@ -17,12 +17,11 @@ get_header();
 
 	<main id="primary" class="site-main">
 	  	<div id="primary" class="content-area">
-		<?php get_template_part( 'template-parts/index', 'aboutus' ); ?>
-		<?php get_template_part( 'template-parts/index', 'services' ); ?>
-		<?php get_template_part( 'template-parts/index', 'team' ); ?>
-		<?php get_template_part( 'template-parts/index', 'features' ); ?>
+		<?php get_template_part( 'template-parts/sections/index', 'aboutus' ); ?>
+		<?php get_template_part( 'template-parts/sections/index', 'features' ); ?>
+		<?php get_template_part( 'template-parts/sections/index', 'services' ); ?>
+		<?php get_template_part( 'template-parts/sections/index', 'team' ); ?>
 		</div>
 	</main>
-
 <?php
 get_footer();

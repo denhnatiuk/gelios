@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit();
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('theme-dark'); ?>>
 <?php 
 	wp_body_open(); 
 ?>
@@ -110,13 +110,12 @@ defined( 'ABSPATH' ) || exit();
 					aria-controls="prefences-menu" aria-expanded="false" aria-label="Toggle prefences"
 					>
 					<span class="navbar-toggler-icon screen-reader-text">Prefences Menu</span>
-				</button>
-				
+				</button>				
 				<?php 
 					get_template_part( 'template-parts/prefences/darklight/darklight', 'btn' ); 
 					get_template_part( 'template-parts/prefences/langSwitch/langSwitch', 'btn' ); 
 					get_template_part( 'template-parts/prefences/search/search', 'btn' ); 
-					get_template_part( 'template-parts/prefences/login/login', 'btn\' ); 
+					get_template_part( 'template-parts/prefences/login/login', 'btn' ); 
 				?>
 			</nav>
 		</div>
@@ -125,5 +124,5 @@ defined( 'ABSPATH' ) || exit();
 
 	</header>
 <?php 
-	get_template_part( 'template-parts/hero', 'header' );
+	get_template_part( 'template-parts/sections/hero', 'header' );
 

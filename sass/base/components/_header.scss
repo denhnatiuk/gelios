@@ -1,0 +1,249 @@
+header.fixed-top-bar{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+
+    width:100vw;
+    height:6.25rem; //100px
+    display: block;
+
+    .primary-bar{
+        flex-grow: 1;
+        width:calc(100vw - 6.25rem);
+        height:3.125rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding:0.25rem 0;
+        margin-left: 6.25rem;
+
+        .site-branding{
+            position: relative;
+            display: flex;
+            flex-basis:24rem;
+            flex-flow: column wrap;
+            align-items: flex-end;
+            justify-content: center;
+            // max-height: 6.25rem;
+            max-height: 3.125rem;
+            margin-right: 1rem;
+            margin-left: -6.25rem;
+            .site-logo{
+                position: relative;
+                display: flex;
+                align-self: flex-start;
+                flex-grow: 2;
+                width:6.25rem;
+                height:6.25rem;
+                margin-top:2rem;//layout fix
+    
+                &:before{
+                    content:"";
+                    position: absolute;
+                    z-index:-1;
+                    top:0;
+                    left:-2rem;
+                    width:8.75rem;
+                    height:6.25rem;
+                    transform: skew(-25deg);
+                    border-radius:5px;                    
+                }
+            }
+            .brand-title, .site-title{
+                flex-grow: 1;
+                position: relative;
+                margin-right:1rem;
+                &:before{
+                    content:"ТОВ";
+                }
+            }
+            .site-description{
+                display:none;
+            }
+        }
+        nav{
+            margin:0 auto;
+            max-height: 3.125rem;
+            li{
+                margin:0;
+                padding:0.5rem;
+                flex:1;
+                flex-wrap: nowrap;
+                align-items: baseline;
+                justify-content: center;
+                text-align:center;
+                a{
+                    display: block;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-weight: 400;
+                    text-align: center;
+                    font-variant: small-caps;
+                    text-decoration: none;
+
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    .secondary-bar{
+        flex-grow: 1;
+        height:3.125rem;
+        padding-left: 7rem;
+    }
+}
+#landingNav{
+    display: flex;
+    flex-flow: row nowrap;
+
+    .menu{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        margin:0 1rem;
+    }
+}
+#prefencesNav{
+    align-self: flex-start;
+    margin: 0 1rem;
+    button:not(.menu-toggle){
+        box-sizing: border-box;
+        width: 2.25rem;
+        height:2.25rem;
+        // border:2px solid;
+        border-radius: 50%;
+    }
+}
+/**
+* Switcher for day-night theme button
+*/
+#daynight{
+	// border:1px solid transparent;
+	// border-radius:5px;
+	// margin:0;
+	// padding:0;
+	background-color:transparent;
+	border-color: transparent;
+	outline: none;
+	&[data-state="0"]{
+		span{
+			display: none;
+			&:first-of-type{
+				display:block;
+			}
+			&:nth-of-type(2){
+				display:none;
+			}
+		}
+	}
+	&[data-state="1"]{
+		span{
+			display: none;
+			&:first-of-type{
+				display:none;
+			}
+			&:nth-of-type(2){
+				display:block;
+			}
+		}
+	}
+}
+
+.menu-toggle{
+    display: none;
+    visibility: hidden;
+}
+
+@media screen and (max-width:30rem) {
+    header.fixed-top-bar{
+        .primary-bar{
+            .site-branding{
+                order:1;
+            }
+            #landingNav{
+                order:3;
+                ul{
+                    display: none;
+                }
+            }
+            #prefencesNav{
+                order: 2;
+            }
+        }
+        .secondary-bar{display: none;}// TODO:make it fixed bottom
+    }
+    .menu-toggle{
+        display: block;
+        position: relative;
+        visibility: visible;
+        transform: skew(-25deg);
+    }
+}
+/**
+* Switcher for lang button
+*/
+html{
+    &[lang="uk"] #translate{
+        span:first-of-type{
+            display: block;
+        }
+        span:nth-of-type(2){
+            display: none;
+        }
+        span:last-of-type{
+            display: none;
+        }
+    }
+    &[lang="ru"] #translate{
+        span:first-of-type{
+            display: none;
+        }
+        span:nth-of-type(2){
+            display: block;
+        }
+        span:last-of-type{
+            display: none;
+        }
+    }
+    &[lang="en"] #translate{
+        span:first-of-type{
+            display: none;
+        }
+        span:nth-of-type(2){
+            display: none;
+        }
+        span:last-of-type{
+            display: block;
+        }
+    }
+}
+.hero-header{
+    .map-svg{
+        position: absolute;
+        right:10%;
+        max-width: 60%;
+        transform: rotate(-15deg);
+        z-index:-1;
+    }
+    .image-back-blob{
+        display: block;
+        width: 100%;
+    }
+}
+.cta{
+    .svg-car{
+        fill: none;
+    }
+    &:hover{
+        .svg-car{
+            fill: var(--theme-color-dark);
+            // transform: translateX(15px);
+            transition: all .5s ease-in-out;
+        }   
+    }
+}

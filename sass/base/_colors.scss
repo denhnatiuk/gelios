@@ -1,0 +1,126 @@
+:root{
+    // --brand-color-main: #b22222; //firebrick
+    // --brand-color-accent:#778899;//lightslate gray
+    // --brand-color-bg:#222; //darkgray
+    //--brand-color-gray:rgba(64,64,64,1); //gray
+    // --brand-color-main: rgba(165,45,45,1);
+    //--brand-color-shadow: rgba(61,50,39,1);
+    //--brand-color-highlight: #ff0000;
+    --brand-color-text:#fafad2; //whitegoldenrod yellow
+}
+a, button{
+    color: inherit;
+    background: transparent;
+    border:0;
+
+    &:hover{
+        color: inherit;
+    }
+    &:visited{
+        color: inherit;
+    }
+    &.btn-default{
+        background:transparent;
+        border:1px solid var(--background-color-main, brown);
+        color:var(--background-color-main, brown);
+        border-radius: 5px;
+    }
+}
+
+
+body{
+    --brand-color-main: #b22222; //firebrick
+    --brand-color-dark: black;
+    --brand-color-light: white;  
+    
+    --brand-color-shade:#222; //darkgray
+    --brand-color-background: rgba(64,64,64,1);
+    --brand-color-accent:#778899;//lightslate gray
+    --brand-color-text: whitesmoke;
+
+    --theme-color-main: var(--brand-color-main);
+    --theme-color-dark: var(--brand-color-dark);
+    --theme-color-light: var(brand-color-light);
+
+    --theme-color-shade: var(--brand-color-shade);
+    --theme-color-background: var(--brand-color-background);
+    --theme-color-accent: var(--brand-color-accent);
+    --theme-color-text: var(--brand-color-text);
+    
+    &.theme-dark{
+        --theme-color-main: var(--brand-color-main);
+        --theme-color-dark: var(--brand-color-dark);
+        --theme-color-light: var(--brand-color-light);
+
+        --theme-color-shade: var(--brand-color-shade);
+        --theme-color-background: var(--brand-color-background);
+        --theme-color-accent: var(--brand-color-accent);
+        --theme-color-text: var(--brand-color-text);
+    }
+    &.theme-light{
+        // --theme-color-main: var(--brand-color-main);
+        --theme-color-main: coral;
+        --theme-color-dark: var(--brand-color-light);
+        --theme-color-light: var(--brand-color-dark);
+
+        --theme-color-shade: var(--brand-color-accent);
+        --theme-color-background: var(--brand-color-light);
+        --theme-color-accent: var(--brand-color-text);
+        --theme-color-text: var(--brand-color-dark);
+    }
+}
+
+body{
+    background-color: var(--theme-color-background);
+    color: var(--theme-color-text);
+}
+
+.primary-bar{
+    background: var(--theme-color-shade);
+    .site-logo:before{
+        background:var(--theme-color-shade);
+    }
+    .brand-title, .site-title{
+        color:var(--theme-color-text, whitesmoke);
+        &:before{
+            content:"ТОВ";
+            color: var(--theme-color-main);
+            
+        }
+    }
+}
+.secondary-bar{
+    // background: linear-gradient(to bottom, var(--brand-color-bg), transparent);
+    // background: linear-gradient(to bottom, transparent 0%, transparent 80%, var(--brand-color-shade));
+    //background: linear-gradient(to bottom, transparent 0%, transparent 80%, var(--brand-color-shade));
+    // background: var(--brand-color-shade);
+    border-bottom: 2px solid transparent;
+}
+#landingNav{
+    .menu-toggle{
+        background: var(--theme-color-main);
+        // border:2px solid var(--theme-color-text);
+        color: var(--theme-color-text)
+    }
+}
+.jumbotron{
+    background: var(--theme-color-background);
+    // border:2px solid var(--theme-color-text);
+    color: var(--theme-color-text);
+    .icon{
+        svg{
+            fill: var(--theme-color-dark);
+        }
+    }
+}
+.jumbotron:hover{
+    background: var(--theme-color-shade);
+    transition: all .3s ease-in-out;
+
+    .icon{
+        background: var(--theme-color-main);
+        svg{
+            fill: var(--theme-color-shade);
+        }
+    }
+}

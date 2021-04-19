@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Lato";
+  src: url("./template-parts/fonts/Lato/Lato-Light.ttf") format("ttf");
+  src:url("./template-parts/fonts/Lato/Lato-Light.eot?#iefix")
+        format("embedded-opentype"),
+      url("./template-parts/fonts/Lato/Lato-Light.woff") 
+        format("woff"),
+      url("./template-parts/fonts/Lato/Lato-Light.ttf") 
+        format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoRegular";
+  src:url("./template-parts/fonts/RobotoRegular.eot");
+  src:url("./template-parts/fonts/RobotoRegular.eot?#iefix")
+        format("embedded-opentype"),
+      url("./template-parts/fonts/RobotoRegular.woff") 
+        format("woff"),
+      url("./template-parts/fonts/RobotoRegular.ttf") 
+        format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "font";
+  src:url("./template-parts/fonts/font.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+  // @font-face {
+  //     font-family: "NautilusPompiliusRegular";
+  //     src: url("../fonts/NautilusPompiliusRegular/NautilusPompiliusRegular.eot");
+  //     src: url("../fonts/NautilusPompiliusRegular/NautilusPompiliusRegular.eot?#iefix")format("embedded-opentype"),
+  //     url("../fonts/NautilusPompiliusRegular/NautilusPompiliusRegular.woff") format("woff"),
+  //     url("../fonts/NautilusPompiliusRegular/NautilusPompiliusRegular.ttf") format("truetype");
+  //     font-style: normal;
+  //     font-weight: normal;
+  // }
+  //
+  // $fonts-list:(
+  //   lato-light: ("Lato", sans-serif) 300 normal,
+  //   lato-reg: ("Lato", sans-serif) 400 normal,
+  //   lato-bold: ("Lato", sans-serif) 700 normal,
+  //   oswald-light: ("Oswald", sans-serif) 200 normal,
+  //   oswald-reg: ("Oswald", sans-serif) 400 normal
+  // );
+  //
+  // @mixin fonts($family, $weight, $style) {
+  //   font-family: $family;
+  //   font-weight: $weight;
+  //   font-style: $style;
+  // }
+  //
+  // @each $font, $attributes in $fonts-list {
+  //   #font-#{$font} {
+  //     @include fonts(nth($attributes, 1), nth($attributes, 2), nth($attributes, 3));
+  //   }
+  // }
+  
