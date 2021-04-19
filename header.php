@@ -5,6 +5,7 @@
  * @scince version 0.0.1
  * 
 */
+defined( 'ABSPATH' ) || exit();
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -58,70 +59,65 @@
 				?>
 			</div>
 			<nav id="landingNav" class="main-navigation">
-				<button class="menu-toggle btn-default" aria-controls="primary-menu" aria-expanded="false">
-				<span class="screen-reader-text"><?php esc_html_e( 'Primary Menu', 'geliostrans' ); ?></span>
+				<button 
+					class="navbar-toggler menu-toggle" 
+					type="button" 
+					data-toggle="collapse" 
+					data-target="#primary-menu" 
+					aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle prefences"
+					>
+					<span class="navbar-toggler-icon screen-reader-text">Prefences Menu</span>
+					<span class="screen-reader-text"><?php esc_html_e( 'Primary Menu', 'geliostrans' ); ?></span>
 				</button>
 				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'landing_nav',
-						'menu_id'        => 'landing_nav',
-					)
-				);
+					wp_nav_menu(
+						array(
+							'theme_location' 	=> 'landing_nav'
+							,'menu_id'        	=> 'landing_nav'
+							,'fallback_cb'		=> 'primary'
+							,'container'        => 'div'
+							,'container_class'  => 'nav-menu'
+							,'container_id'     => 'landingNav'
+						)
+					);
+									
+				//wp_nav_menu( [
+					// 	'theme_location'  => '',
+					// 	'menu_id'         => '',
+					// 	'menu'            => '', 
+					// 	'container'       => 'div', 
+					// 	'container_class' => '', 
+					// 	'container_id'    => '',
+					// 	'menu_class'      => 'menu', 
+					// 	'echo'            => true,
+					// 	'fallback_cb'     => 'wp_page_menu',
+					// 	'before'          => '',
+					// 	'after'           => '',
+					// 	'link_before'     => '',
+					// 	'link_after'      => '',
+					// 	'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					// 	'depth'           => 0,
+					// 	'walker'          => '',
+					// ] );
 				?>
 			</nav>
 			<nav id="prefencesNav" class="main-navigation">
-				<button class="menu-toggle" aria-controls="prefences-menu" aria-expanded="false">
-					<span class="screen-reader-text">Prefences Menu</span>
+				<button 
+					class="navbar-toggler menu-toggle" 
+					type="button" 
+					data-toggle="collapse" 
+					data-target="#prefences-menu" 
+					aria-controls="prefences-menu" aria-expanded="false" aria-label="Toggle prefences"
+					>
+					<span class="navbar-toggler-icon screen-reader-text">Prefences Menu</span>
 				</button>
-                <button id="daynight" class="" aria-controls="prefences-menu" aria-expanded="false" onclick="switchDayNight()" data-state="0">
-                    <span>☀</span>
-                    <span>☾</span>
-                    <span>DayNight</span>
-                </button>
-				<!--
-                <button id="translate" class="" aria-controls="prefences-menu" aria-expanded="false" onclick="switchLanguage()" data-state="0">
-                    <span>UA</span>
-                    <span>RU</span>
-                    <span>EN</span>
-                </button>
-				<button id="search" class="" aria-controls="prefences-menu" aria-expanded="false" onclick="switchLanguage()" data-state="0">
-					<span class="screen-reader-text">Search</span>
-					<?php //get_template_part( 'template-parts/svg/svg', 'search' ); ?>
-                </button>
-				<button id="login" class="" aria-controls="prefences-menu" aria-expanded="false" onclick="openModal('login')" data-state="0">
-					<span class="screen-reader-text">Login</span>
-					<?php //get_template_part( 'template-parts/svg/svg', 'login' ); ?>
-                </button>
-				-->
-                <script>
-                    // function switchDayNight(){
-                    //     console.log(document.getElementById('daynight').dataset);
-                    //     if(document.getElementById('daynight').dataset.state == 0)
-                    //     {
-                    //         if(document.body.classList.contains('theme-dark')) document.body.classList.remove('theme-dark');
-                    //         document.body.classList +=' theme-light';
-                    //         document.getElementById('daynight').dataset.state = 1;
-                    //     } else {
-                    //         if(document.body.classList.contains('theme-light')) document.body.classList.remove('theme-light');
-                    //         document.body.classList +=' theme-dark';
-                    //         document.getElementById('daynight').dataset.state = 0;
-                    //     }
-                    // }
-                    function switchLanguage(){
-                        console.log(document.getElementById('translate').dataset);
-                        if(document.getElementById('translate').dataset.state == 0)
-                        {
-                            if(document.body.classList.contains('lang-ua')) document.body.classList.remove('theme-dark');
-                            document.body.classList +=' theme-light';
-                            document.getElementById('daynight').dataset.state = 1;
-                        } else {
-                            if(document.body.classList.contains('theme-light')) document.body.classList.remove('theme-light');
-                            document.body.classList +=' theme-dark';
-                            document.getElementById('daynight').dataset.state = 0;
-                        }
-                    }
-                </script>
+				
+				<?php 
+					get_template_part( 'template-parts/prefences/darklight/darklight', 'btn' ); 
+					get_template_part( 'template-parts/prefences/langSwitch/langSwitch', 'btn' ); 
+					get_template_part( 'template-parts/prefences/search/search', 'btn' ); 
+					get_template_part( 'template-parts/prefences/login/login', 'btn\' ); 
+				?>
 			</nav>
 		</div>
 		<div class="secondary-bar">

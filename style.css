@@ -16,3 +16,7 @@ Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 */
+.screen-reader-text{
+    display:none;
+    visibility: hidden;
+}

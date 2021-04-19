@@ -4,10 +4,7 @@
   ,"description": "Geliostrans theme"
   ,"author": "Den Hnatiuk <denys.hnatiuk@gmail.com>"
   ,"license": "SEE LICENSE IN LICENSE.TXT"
-  ,"keywords": [
-    "WordPress"
-    ,"Theme"
-  ]
+  ,"keywords": ["WordPress","Theme"]
   ,"repository": {"type": "git","url": "git+https://github.com/DenysHnatiuk/gelios.git"}
   ,"homepage": "https://github.com/DenysHnatiuk/gelios#readme"
   ,"bugs": {"url": "https://github.com/DenysHnatiuk/gelios/issues"}
