@@ -108,17 +108,17 @@ header.fixed-top-bar{
         margin:0 1rem;
     }
 }
-#prefencesNav{
-    align-self: flex-start;
-    margin: 0 1rem;
-    button:not(.menu-toggle){
-        box-sizing: border-box;
-        width: 2.25rem;
-        height:2.25rem;
-        // border:2px solid;
-        border-radius: 50%;
-    }
-}
+// #prefencesNav{
+//     align-self: flex-start;
+//     margin: 0 1rem;
+//     button:not(.menu-toggle){
+//         box-sizing: border-box;
+//         width: 2.25rem;
+//         height:2.25rem;
+//         // border:2px solid;
+//         border-radius: 50%;
+//     }
+// }
 /**
 * Switcher for day-night theme button
 */
@@ -236,12 +236,19 @@ html{
     }
 }
 .cta{
-    .svg-car{
-        fill: none;
+    svg{
+        .svg-arr{
+            fill:var(--theme-color-text);
+        }
+        .svg-car{
+            fill: none;
+        }
+        
     }
     &:hover{
         .svg-car{
-            fill: var(--theme-color-dark);
+            fill: var(--theme-color-text);
+            stroke:1px var(--theme-color-text);
             // transform: translateX(15px);
             transition: all .5s ease-in-out;
         }   

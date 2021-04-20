@@ -4,15 +4,15 @@
     <div class="row align-items-between xs-row-reverse">
         <div class="col-12 col-md-8 col-lg-6 aos-init aos-animate" data-aos="fade-right">
             <h3>Колосальний досвід<br><span class="text-danger">в логістичних процесах</span>.</h3>
-            <p class="font-size-lg text-muted mb-6">
+            <p class="font-size-lg text-muted ">
               В своїй роботі ми спираємося на роки досвіду в логістичному бізнесі і відточені за стандартами ISO бізнес-процеси.
             </p>
-            <div class="jumbotron jumbotron-overflowed">
+            <div class="jumbotron jumbotron-overflowed w-200">
               <div class="icon text-primary">
-              <?php get_template_part( 'template-parts/svg/svg', 'book' );?>
+                <?php get_template_part( 'template-parts/svg/svg', 'book' );?>
               </div>
-              <div class="ml-5">
-                <h5 class="mb-1">
+              <div class="">
+                <h5 class="">
                   Haша історія успіху
                 </h5>
                 <p class="text-muted mb-6">
@@ -20,28 +20,28 @@
                 </p>
               </div>
             </div>
-            <div class="jumbotron jumbotron-overflowed">
+            <div class="jumbotron jumbotron-overflowed w-200">
               <div class="icon text-primary">
                 <?php get_template_part( 'template-parts/svg/svg', 'awards' );?>
               </div>
-              <div class="ml-5">
-                <h4 class="mb-1">
+              <div class="">
+                <h5 class="">
                   Отримані нагороди
-                </h4>
-                <p class="text-muted mb-6 mb-md-0">
+                </h5>
+                <p class="text-muted" >
                   Нас щорічно номінують на бла бла бла.
                 </p>
               </div>
             </div>
-            <div class="jumbotron jumbotron-overflowed">
+            <div class="jumbotron jumbotron-overflowed w-200">
               <div class="icon text-primary">
                 <?php get_template_part( 'template-parts/svg/svg', 'iso' );?>
               </div>
-              <div class="ml-5">
-                <h4 class="mb-1">
-                  Працюємо за стандартами.
-                </h4>
-                <p class="text-muted mb-6 mb-md-0">
+              <div class="">
+                <h5 class="">
+                  ISO&nbsp;9001
+                </h5>
+                <p class="text-muted" >
                   Бла на бла бла бла.
                 </p>
               </div>

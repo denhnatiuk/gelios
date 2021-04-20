@@ -10339,7 +10339,13 @@ section {
 }
 
 .jumbotron-overflowed {
-	padding: 1rem;
+	--layer-z-index: 1;
+	position: absolute;
+	top: 2rem;
+	left: 2rem;
+	z-index: var(--layer-z-index);
+	width: 60%;
+	padding: 0.25rem 1rem;
 	border: 1px solid var(--theme-color-main);
 	border-radius: 5px;
 }
@@ -10349,16 +10355,40 @@ section {
 	float: right;
 }
 
-button {
-	min-width: 2rem;
-	min-height: 2rem;
-	outline: none;
-	padding: 0.25rem;
+.jumbotron-overflowed h5 {
+	margin-top: 0;
 }
 
-button.btn-success {
-	color: white;
-	background-color: #5cb85c;
+.jumbotron-overflowed + .jumbotron-overflowed {
+	--layer-z-index:calc(var(--layer-z-index) + 1);
+	z-index: var(--layer-z-index);
+	top: 5rem;
+	left: 5rem;
+	padding: 0.25rem 1rem;
+}
+
+.jumbotron-overflowed + .jumbotron-overflowed h5 {
+	margin-top: 0;
+}
+
+.jumbotron-overflowed + .jumbotron-overflowed + .jumbotron-overflowed {
+	--layer-z-index:calc(var(--layer-z-index) + 1);
+	z-index: var(--layer-z-index);
+	top: 5rem;
+	left: 5rem;
+	padding: 0.25rem 1rem;
+}
+
+.jumbotron-overflowed + .jumbotron-overflowed + .jumbotron-overflowed h5 {
+	margin-top: 0;
+}
+
+.jumbotron-overflowed + .jumbotron-overflowed + .jumbotron-overflowed:hover {
+	z-index: 10;
+}
+
+.jumbotron-overflowed:hover {
+	z-index: 10;
 }
 
 .img-skewed {
@@ -10527,18 +10557,6 @@ header.fixed-top-bar .secondary-bar {
 	margin: 0 1rem;
 }
 
-#prefencesNav {
-	align-self: flex-start;
-	margin: 0 1rem;
-}
-
-#prefencesNav button:not(.menu-toggle) {
-	box-sizing: border-box;
-	width: 2.25rem;
-	height: 2.25rem;
-	border-radius: 50%;
-}
-
 /**
 * Switcher for day-night theme button
 */
@@ -10653,12 +10671,17 @@ html[lang="en"] #translate span:last-of-type {
 	width: 100%;
 }
 
-.cta .svg-car {
+.cta svg .svg-arr {
+	fill: var(--theme-color-text);
+}
+
+.cta svg .svg-car {
 	fill: none;
 }
 
 .cta:hover .svg-car {
-	fill: var(--theme-color-dark);
+	fill: var(--theme-color-text);
+	stroke: 1px var(--theme-color-text);
 	transition: all .5s ease-in-out;
 }
 

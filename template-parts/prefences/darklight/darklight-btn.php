@@ -8,7 +8,7 @@ function gelios_enqueue_darklight_script(){
 
 <button 
   id="darklight" 
-  class="btn btn-default" 
+  class="btn " 
   onclick="darklight.darklightChange();"
   aria-controls="prefences-menu" aria-expanded="false" aria-label="Dark Light Switcher"
   >

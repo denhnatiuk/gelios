@@ -3,7 +3,7 @@
 
 <button 
   id="translate" 
-  class="btn btn-default" 
+  class="btn " 
   aria-controls="prefences-menu" 
   aria-expanded="false" 
   onclick="switchLanguage()" 
