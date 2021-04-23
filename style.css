@@ -10703,8 +10703,8 @@ body::-webkit-scrollbar-thumb {
 	background: linear-gradient(to left, var(--brand-color-accent), var(--brand-color-accent) 5px, var(--brand-color-dark));
 }
 
-#aboutus-pills-tab > #aboutus-pills-history-tab.active + .bg-container {
-	background: red;
+section#aboutus {
+	justify-content: flex-start;
 }
 
 /*--------------------------------------------------------------

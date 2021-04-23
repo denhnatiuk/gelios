@@ -265,6 +265,6 @@ body::-webkit-scrollbar {
 }
 
 
-#aboutus-pills-tab>#aboutus-pills-history-tab.active + .bg-container{
-    background:red;
+section#aboutus{
+    justify-content: flex-start;
 }
