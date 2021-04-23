@@ -47,7 +47,7 @@ body{
     --theme-color-accent: var(--brand-color-accent);
     --theme-color-text: var(--brand-color-text);
     
-    &.theme-dark{
+    &.darklight-dark{
         --theme-color-main: var(--brand-color-main);
         --theme-color-dark: var(--brand-color-dark);
         --theme-color-light: var(--brand-color-light);
@@ -57,7 +57,7 @@ body{
         --theme-color-accent: var(--brand-color-accent);
         --theme-color-text: var(--brand-color-text);
     }
-    &.theme-light{
+    &.darklight-light{
         // --theme-color-main: var(--brand-color-main);
         --theme-color-main: coral;
         --theme-color-dark: var(--brand-color-light);
@@ -83,9 +83,7 @@ body{
     .brand-title, .site-title{
         color:var(--theme-color-text, whitesmoke);
         &:before{
-            content:"ТОВ";
-            color: var(--theme-color-main);
-            
+            color: var(--theme-color-main);            
         }
     }
 }

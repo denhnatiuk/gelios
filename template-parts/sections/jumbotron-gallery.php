@@ -7,13 +7,10 @@
  */
 
 ?>
-<section id="aboutus" class="wp-block-columns alignwide are-vertically-aligned-center" 
-style="background-image:url(<?php  echo get_template_directory_uri() ?>/template-parts/images/grow.jpeg);
-    background-position:center;
-    background-attachment:fixed;
-    background-size:cover;
-    background-repeat:no-repeat
-    ">
+<section id="aboutus" class="container">
+    
+
+
     <div class="container">
         <h3>100500 років бездоганного досвіду</h3>
         <p>Компанія ГЕЛИОС-ТРАНС була заснована 0000 року як підприємство що надавало експедиційні послуги і бла бла бла.</p>

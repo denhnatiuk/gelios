@@ -73,4 +73,8 @@
   </div>
 
     </div>
+    <div class="fixed-stuff">
+      <button class="btn btn-default"></button>
+    </div>
+    <?php wp_footer();?>
 </footer>

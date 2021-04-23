@@ -10,6 +10,7 @@ body{
 }
 
 section{
+    position: relative;
     min-height:100vh;
     width:100vw;
     padding-top:6.25rem;
@@ -17,6 +18,13 @@ section{
     align-items: center;
     justify-content: space-around;
     // mix-blend-mode: difference;
+}
+.bg-container{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    z-index:-1;
+
 }
 .well {
     min-width:300px;
@@ -91,6 +99,12 @@ section{
             z-index:10;
         }
     }
+    &.tab-pane{
+        min-width:50vw;
+        max-width:90vw;
+        min-height: 50vh;
+        background: rgba(0, 0, 0, 0.5);
+    }
 }
 
 // button{
@@ -123,6 +137,7 @@ section{
 
 #features{
     .jumbotron{
+        box-shadow: 1px 1px 5px var(--theme-color-dark);
         transition: all 0.5s ease-in-out;
         h5{
             display: block;
@@ -151,9 +166,94 @@ section{
     }
 }
 
+.btn{
+    outline:none;
+    &-shade{
+        display: flex;
+        flex-flow: row nowrap;
+        margin-bottom: 2rem;
+        background: var(--theme-color-shade);
+        color:var(--theme-color-text);
+        .icon{
+            margin-right:.5rem;
+        }
+        span{
+            padding-left: .5rem;
+            border-left:3px solid transparent;
+        }
+        &:hover{
+            color:var(--theme-color-text);
+            
+        }
+        &.active{
+            .icon{
+                display: block;        
+            }
+            span{
+                border-left-color:var(--theme-color-main);
+            
+            }
+        }
+    }
+}
+
+.shine{
+    position: relative;
+    overflow: hidden;
+    // width: 50px;
+    // height: 50px;
+    // display: inline-block;
+
+    // border-radius: 5px;
+    // text-decoration: none;
+    // text-align: center;
+    // line-height: 50px;
+    // font-size: 12px;
+    // font-family: sans-serif;
+    // margin: 25px 0 25px 25px;
+    // color: #fff;
+    // background: cornflowerblue;
+    &:after {
+        content: "";
+        position: absolute;
+        top: -210%;
+        left: -310%;
+        width: 300%;
+        height: 300%;
+        opacity: 0;
+        transform: skew(30deg);
+    
+        background: rgba(255, 255, 255, 0.13);
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0.13) 0%,
+          rgba(255, 255, 255, 0.13) 77%,
+          rgba(255, 255, 255, 0.5) 92%,
+          rgba(255, 255, 255, 0.0) 100%
+        );
+    }
+    &:hover:after {
+        opacity: 1;
+        top: -30%;
+        left: -30%;
+        transition-property: left, top, opacity;
+        transition-duration: 0.7s, 0.7s, 0.15s;
+        transition-timing-function: ease;
+    }
+    &:active:after {
+        opacity: 0;
+    }
+}
+
+  
+  
+
+
 @import "components/header";
 // @import "components/buttons";
  
+@import "../plugins/darklight";
+
 @media screen and (max-width: 30rem) {
      
 }
@@ -161,4 +261,10 @@ body::-webkit-scrollbar {
     width: 0.5em; }
   
   body::-webkit-scrollbar-thumb {
-    background: linear-gradient(to left, var(--brand-color-accent), var(--brand-color-accent) 5px,var(--brand-color-dark)); }
+    background: linear-gradient(to left, var(--brand-color-accent), var(--brand-color-accent) 5px,var(--brand-color-dark)); 
+}
+
+
+#aboutus-pills-tab>#aboutus-pills-history-tab.active + .bg-container{
+    background:red;
+}

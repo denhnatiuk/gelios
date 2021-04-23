@@ -7,7 +7,9 @@
  defined('ABSPATH') or die('Cheatin\' Uh?');
 
 ?>
-<svg version="1.1" id="cup" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 462.999 462.999" style="enable-background:new 0 0 462.999 462.999;" xml:space="preserve">
+<svg x="0px" y="0px" viewBox="0 0 462.999 462.999" 
+    xmlns="http://www.w3.org/2000/svg"
+    fill="var(--theme-color-dark)">
 <g>
 <path d="M415.5,64H359V45.766c9.29-3.138,16-11.93,16-22.266C375,10.542,364.458,0,351.5,0h-240C98.542,0,88,10.542,88,23.5
     c0,10.336,6.71,19.128,16,22.266V64H47.5C34.542,64,24,74.542,24,87.5v47.999c0,56.56,45.605,102.661,101.974,103.481

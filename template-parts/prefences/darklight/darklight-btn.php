@@ -8,11 +8,10 @@ function gelios_enqueue_darklight_script(){
 
 <button 
   id="darklight" 
-  class="btn " 
-  onclick="darklight.darklightChange();"
+  class=" " 
+  onclick="darklightChange();"
   aria-controls="prefences-menu" aria-expanded="false" aria-label="Dark Light Switcher"
+  alt="Dark Light Theme Switcher"
   >
-    <span>☀</span>
-    <span>☾</span>
-    <span class="screen-reader-text">Dark Light Switcher</span>
+  <!-- <span class="screen-reader-text">Dark Light Switcher</span> -->
 </button>

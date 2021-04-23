@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit();
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class('theme-dark'); ?>>
+<body <?php body_class('darklight-dark'); ?>>
 <?php 
 	wp_body_open(); 
 ?>
@@ -27,7 +27,7 @@ defined( 'ABSPATH' ) || exit();
 		<?php esc_html_e( 'Skip to content', 'geliostrans' ); ?>
 	</a>
 
-	<header id="masthead" class="site-header fixed-top-bar">
+	<header id="masthead" class="site-header fixed-top-bar navbar-fixed navbar-expand-lg ">
 		<div class="primary-bar">
 			<div class="site-branding">
 				<?php
@@ -45,9 +45,8 @@ defined( 'ABSPATH' ) || exit();
 					?>
 					<h1 class="brand-title">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<!-- <span class="brand-form">ТОВ</span> -->
-					<?php bloginfo( 'name' ); 
-				?>
+						<span class="brand-form">ТОВ</span>
+						<?php bloginfo( 'name' );?>
 					</a>
 				</h1>
 				<?php
@@ -66,40 +65,51 @@ defined( 'ABSPATH' ) || exit();
 					data-target="#primary-menu" 
 					aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle prefences"
 					>
-					<span class="navbar-toggler-icon screen-reader-text">Prefences Menu</span>
 					<span class="screen-reader-text"><?php esc_html_e( 'Primary Menu', 'geliostrans' ); ?></span>
+					<span class="navbar-toggler-icon"></span>
 				</button>
+
+				<div class="collapse navbar-collapse" id="primary-menu">
+					<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link shine" href="#aboutus">Про Нас</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link shine" href="#features">Переваги</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link shine" href="#team">Команда</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link shine" href="#services">Послуги</a>
+					</li>
+					<!-- <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Dropdown
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Action</a>
+						<a class="dropdown-item" href="#">Another action</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Something else here</a>
+						</div>
+					</li> -->
+					<!-- <li class="nav-item">
+						<a class="nav-link disabled" href="#">Disabled</a>
+					</li> -->
+					</ul>
+				</div>
 				<?php
-					wp_nav_menu(
-						array(
-							'theme_location' 	=> 'landing_nav'
-							,'menu_id'        	=> 'landing_nav'
-							,'fallback_cb'		=> 'primary'
-							,'container'        => 'div'
-							,'container_class'  => 'nav-menu'
-							,'container_id'     => 'landingNav'
-						)
-					);
-									
-				//wp_nav_menu( [
-					// 	'theme_location'  => '',
-					// 	'menu_id'         => '',
-					// 	'menu'            => '', 
-					// 	'container'       => 'div', 
-					// 	'container_class' => '', 
-					// 	'container_id'    => '',
-					// 	'menu_class'      => 'menu', 
-					// 	'echo'            => true,
-					// 	'fallback_cb'     => 'wp_page_menu',
-					// 	'before'          => '',
-					// 	'after'           => '',
-					// 	'link_before'     => '',
-					// 	'link_after'      => '',
-					// 	'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-					// 	'depth'           => 0,
-					// 	'walker'          => '',
-					// ] );
-				?>
+					// wp_nav_menu(
+					// 	array(
+					// 		'theme_location' 	=> 'landing_nav'
+					// 		,'menu_id'        	=> 'landing_nav'
+					// 		,'fallback_cb'		=> 'primary'
+					// 		,'container'        => 'div'
+					// 		,'container_class'  => 'nav-menu'
+					// 		,'container_id'     => 'landingNav'
+					// 	)
+					// );?>
 			</nav>
 			<nav id="prefencesNav" class="main-navigation">
 				<button 

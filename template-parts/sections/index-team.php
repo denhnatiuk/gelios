@@ -8,7 +8,7 @@
 
 ?>
 <section id="team" class="wp-block-columns alignwide are-vertically-aligned-center" 
-style="background-image:url(<?php  echo get_template_directory_uri() ?>/template-parts/images/team-bg.jpg);
+style="background-image:url(<?php  echo get_template_directory_uri() ?>/assets/images/team-bg.jpg);
     background-position:center;
     background-attachment:fixed;
     background-size:cover;

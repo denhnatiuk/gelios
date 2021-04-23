@@ -1,0 +1,38 @@
+/**
+* Switcher for lang button
+*/
+html{
+    &[lang="uk"] #translate{
+        span.icon:first-of-type{
+            display: block;
+        }
+        span.icon:nth-of-type(2){
+            display: none;
+        }
+        span.icon:last-of-type{
+            display: none;
+        }
+    }
+    &[lang="ru_RU"] #translate{
+        span.icon:first-of-type{
+            display: none;
+        }
+        span.icon:nth-of-type(2){
+            display: block;
+        }
+        span.icon:last-of-type{
+            display: none;
+        }
+    }
+    &[lang="en_US"] #translate{
+        span.icon:first-of-type{
+            display: none;
+        }
+        span.icon:nth-of-type(2){
+            display: none;
+        }
+        span.icon:last-of-type{
+            display: block;
+        }
+    }
+}

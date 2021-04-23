@@ -1,0 +1,49 @@
+.site-branding{
+    position: relative;
+    display: flex;
+    flex-basis:22rem;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    justify-content: center;
+    // max-height: 6.25rem;
+    max-height: 3.125rem;
+    margin-right: 1rem;
+    margin-left: -6.25rem;
+    .site-logo{
+        position: relative;
+        display: flex;
+        align-self: flex-start;
+        flex-grow: 2;
+        width:6.25rem;
+        height:6.25rem;
+        margin-top:2rem;//layout fix
+
+        &:before{
+            content:"";
+            position: absolute;
+            z-index:-1;
+            top:0;
+            left:-2rem;
+            width:8.75rem;
+            height:6.25rem;
+            transform: skew(-25deg);
+            border-radius:5px;                    
+        }
+    }
+    .brand-title, .site-title{
+        flex-grow: 1;
+        position: relative;
+        margin-right:1rem;
+        font-style: italic;
+        // &:before
+        //     content:"ТОВ";
+        // }
+        .brand-form{
+            color:var(--theme-color-main);
+            font-size:1.25rem;
+        }
+    }
+    .site-description{
+        display:none;
+    }
+}

@@ -1,0 +1,31 @@
+body{
+    #darklight{        
+        width: 2rem;
+        height:2rem;
+        padding:0.125rem 0;
+    }
+    &.darklight-light{
+        #darklight{        
+            background:transparent;
+        }
+        #darklight:before{
+            content:"☾";
+            display: block;
+            position: relative;
+            width:2rem;
+            height:2rem;
+        }
+    }
+    &.darklight-dark{
+        #darklight{        
+            background:transparent;
+        }
+        #darklight:before{
+            content:"☀";
+            display: block;
+            position: relative;
+            width:2rem;
+            height:2rem;
+        }
+    }
+}

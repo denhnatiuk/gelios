@@ -10104,7 +10104,7 @@ body {
 	--theme-color-text: var(--brand-color-text);
 }
 
-body.theme-dark {
+body.darklight-dark {
 	--theme-color-main: var(--brand-color-main);
 	--theme-color-dark: var(--brand-color-dark);
 	--theme-color-light: var(--brand-color-light);
@@ -10114,7 +10114,7 @@ body.theme-dark {
 	--theme-color-text: var(--brand-color-text);
 }
 
-body.theme-light {
+body.darklight-light {
 	--theme-color-main: coral;
 	--theme-color-dark: var(--brand-color-light);
 	--theme-color-light: var(--brand-color-dark);
@@ -10142,7 +10142,6 @@ body {
 }
 
 .primary-bar .brand-title:before, .primary-bar .site-title:before {
-	content: "ТОВ";
 	color: var(--theme-color-main);
 }
 
@@ -10282,7 +10281,7 @@ h6 {
 }
 
 .site-header {
-	font-size: 1.25rem;
+	font-size: 1rem;
 }
 
 nav ul {
@@ -10303,12 +10302,20 @@ body {
 }
 
 section {
+	position: relative;
 	min-height: 100vh;
 	width: 100vw;
 	padding-top: 6.25rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+}
+
+.bg-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
 }
 
 .well {
@@ -10391,6 +10398,13 @@ section {
 	z-index: 10;
 }
 
+.jumbotron.tab-pane {
+	min-width: 50vw;
+	max-width: 90vw;
+	min-height: 50vh;
+	background: rgba(0, 0, 0, 0.5);
+}
+
 .img-skewed {
 	-webkit-perspective: 1500px;
 	perspective: 1500px;
@@ -10411,6 +10425,7 @@ section {
 }
 
 #features .jumbotron {
+	box-shadow: 1px 1px 5px var(--theme-color-dark);
 	transition: all 0.5s ease-in-out;
 }
 
@@ -10440,6 +10455,70 @@ section {
 	color: var(--theme-color-text) !important;
 }
 
+.btn {
+	outline: none;
+}
+
+.btn-shade {
+	display: flex;
+	flex-flow: row nowrap;
+	margin-bottom: 2rem;
+	background: var(--theme-color-shade);
+	color: var(--theme-color-text);
+}
+
+.btn-shade .icon {
+	margin-right: .5rem;
+}
+
+.btn-shade span {
+	padding-left: .5rem;
+	border-left: 3px solid transparent;
+}
+
+.btn-shade:hover {
+	color: var(--theme-color-text);
+}
+
+.btn-shade.active .icon {
+	display: block;
+}
+
+.btn-shade.active span {
+	border-left-color: var(--theme-color-main);
+}
+
+.shine {
+	position: relative;
+	overflow: hidden;
+}
+
+.shine:after {
+	content: "";
+	position: absolute;
+	top: -210%;
+	left: -310%;
+	width: 300%;
+	height: 300%;
+	opacity: 0;
+	transform: skew(30deg);
+	background: rgba(255, 255, 255, 0.13);
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.5) 92%, rgba(255, 255, 255, 0) 100%);
+}
+
+.shine:hover:after {
+	opacity: 1;
+	top: -30%;
+	left: -30%;
+	transition-property: left, top, opacity;
+	transition-duration: 0.7s, 0.7s, 0.15s;
+	transition-timing-function: ease;
+}
+
+.shine:active:after {
+	opacity: 0;
+}
+
 header.fixed-top-bar {
 	position: fixed;
 	top: 0;
@@ -10466,7 +10545,7 @@ header.fixed-top-bar .primary-bar {
 header.fixed-top-bar .primary-bar .site-branding {
 	position: relative;
 	display: flex;
-	flex-basis: 24rem;
+	flex-basis: 22rem;
 	flex-flow: column wrap;
 	align-items: flex-end;
 	justify-content: center;
@@ -10501,98 +10580,16 @@ header.fixed-top-bar .primary-bar .site-branding .brand-title, header.fixed-top-
 	flex-grow: 1;
 	position: relative;
 	margin-right: 1rem;
+	font-style: italic;
 }
 
-header.fixed-top-bar .primary-bar .site-branding .brand-title:before, header.fixed-top-bar .primary-bar .site-branding .site-title:before {
-	content: "ТОВ";
+header.fixed-top-bar .primary-bar .site-branding .brand-title .brand-form, header.fixed-top-bar .primary-bar .site-branding .site-title .brand-form {
+	color: var(--theme-color-main);
+	font-size: 1.25rem;
 }
 
 header.fixed-top-bar .primary-bar .site-branding .site-description {
 	display: none;
-}
-
-header.fixed-top-bar .primary-bar nav {
-	margin: 0 auto;
-	max-height: 3.125rem;
-}
-
-header.fixed-top-bar .primary-bar nav li {
-	margin: 0;
-	padding: 0.5rem;
-	flex: 1;
-	flex-wrap: nowrap;
-	align-items: baseline;
-	justify-content: center;
-	text-align: center;
-}
-
-header.fixed-top-bar .primary-bar nav li a {
-	display: block;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-weight: 400;
-	text-align: center;
-	font-variant: small-caps;
-	text-decoration: none;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
-}
-
-header.fixed-top-bar .secondary-bar {
-	flex-grow: 1;
-	height: 3.125rem;
-	padding-left: 7rem;
-}
-
-#landingNav {
-	display: flex;
-	flex-flow: row nowrap;
-}
-
-#landingNav .menu {
-	display: flex;
-	flex-flow: row nowrap;
-	align-items: center;
-	justify-content: space-between;
-	margin: 0 1rem;
-}
-
-/**
-* Switcher for day-night theme button
-*/
-#daynight {
-	background-color: transparent;
-	border-color: transparent;
-	outline: none;
-}
-
-#daynight[data-state="0"] span {
-	display: none;
-}
-
-#daynight[data-state="0"] span:first-of-type {
-	display: block;
-}
-
-#daynight[data-state="0"] span:nth-of-type(2) {
-	display: none;
-}
-
-#daynight[data-state="1"] span {
-	display: none;
-}
-
-#daynight[data-state="1"] span:first-of-type {
-	display: none;
-}
-
-#daynight[data-state="1"] span:nth-of-type(2) {
-	display: block;
-}
-
-.menu-toggle {
-	display: none;
-	visibility: hidden;
 }
 
 @media screen and (max-width: 30rem) {
@@ -10619,45 +10616,6 @@ header.fixed-top-bar .secondary-bar {
 	}
 }
 
-/**
-* Switcher for lang button
-*/
-html[lang="uk"] #translate span:first-of-type {
-	display: block;
-}
-
-html[lang="uk"] #translate span:nth-of-type(2) {
-	display: none;
-}
-
-html[lang="uk"] #translate span:last-of-type {
-	display: none;
-}
-
-html[lang="ru"] #translate span:first-of-type {
-	display: none;
-}
-
-html[lang="ru"] #translate span:nth-of-type(2) {
-	display: block;
-}
-
-html[lang="ru"] #translate span:last-of-type {
-	display: none;
-}
-
-html[lang="en"] #translate span:first-of-type {
-	display: none;
-}
-
-html[lang="en"] #translate span:nth-of-type(2) {
-	display: none;
-}
-
-html[lang="en"] #translate span:last-of-type {
-	display: block;
-}
-
 .hero-header .map-svg {
 	position: absolute;
 	right: 10%;
@@ -10669,6 +10627,11 @@ html[lang="en"] #translate span:last-of-type {
 .hero-header .image-back-blob {
 	display: block;
 	width: 100%;
+}
+
+.hero-header h2 {
+	margin-top: 0;
+	margin-bottom: 3rem;
 }
 
 .cta svg .svg-arr {
@@ -10685,12 +10648,63 @@ html[lang="en"] #translate span:last-of-type {
 	transition: all .5s ease-in-out;
 }
 
+.bg-shape {
+	position: absolute;
+	right: 10%;
+	z-index: -1;
+}
+
+.bg-shape-fluid {
+	width: 100vw;
+	right: 0;
+	left: 0;
+}
+
+.bg-shape-bottom {
+	bottom: -4rem;
+	min-height: 4rem;
+}
+
+body #darklight {
+	width: 2rem;
+	height: 2rem;
+	padding: 0.125rem 0;
+}
+
+body.darklight-light #darklight {
+	background: transparent;
+}
+
+body.darklight-light #darklight:before {
+	content: "☾";
+	display: block;
+	position: relative;
+	width: 2rem;
+	height: 2rem;
+}
+
+body.darklight-dark #darklight {
+	background: transparent;
+}
+
+body.darklight-dark #darklight:before {
+	content: "☀";
+	display: block;
+	position: relative;
+	width: 2rem;
+	height: 2rem;
+}
+
 body::-webkit-scrollbar {
 	width: 0.5em;
 }
 
 body::-webkit-scrollbar-thumb {
 	background: linear-gradient(to left, var(--brand-color-accent), var(--brand-color-accent) 5px, var(--brand-color-dark));
+}
+
+#aboutus-pills-tab > #aboutus-pills-history-tab.active + .bg-container {
+	background: red;
 }
 
 /*--------------------------------------------------------------
