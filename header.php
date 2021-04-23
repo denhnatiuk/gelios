@@ -28,6 +28,29 @@ defined( 'ABSPATH' ) || exit();
 	</a>
 
 	<header id="masthead" class="site-header fixed-top-bar navbar-fixed navbar-expand-lg ">
+		<div  id="prefencesNav"  class="secondary-bar">
+			<!-- <divclass="main-navigation">		 -->
+				<div class="prefences-navbar" id="prefencesBar">
+					<script>
+						function togglePrefences(){
+							const toggleButton = document.getElementById('prefencesToggleButton');
+							const barContainer = document.getElementById('prefencesBar');
+							console.log(toggleButton);
+							console.log(barContainer);
+							toggleButton.classList.toggle('arrow');
+							barContainer.classList.toggle('hide')
+
+						}
+					</script>
+					<?php 
+					get_template_part( 'template-parts/prefences/darklight/darklight', 'btn' ); 
+					get_template_part( 'template-parts/prefences/langSwitch/langSwitch', 'btn' ); 
+					get_template_part( 'template-parts/prefences/search/search', 'btn' ); 
+					get_template_part( 'template-parts/prefences/login/login', 'btn' ); 
+					?>
+				</div>						
+			<!-- </div> -->
+		</div>
 		<div class="primary-bar">
 			<div class="site-branding">
 				<?php
@@ -111,27 +134,25 @@ defined( 'ABSPATH' ) || exit();
 					// 	)
 					// );?>
 			</nav>
-			<nav id="prefencesNav" class="main-navigation">
-				<button 
+			<button 
 					class="navbar-toggler menu-toggle" 
 					type="button" 
 					data-toggle="collapse" 
 					data-target="#prefences-menu" 
 					aria-controls="prefences-menu" aria-expanded="false" aria-label="Toggle prefences"
+					onclick="togglePrefences()"
+					id="prefencesToggleButton"
 					>
-					<span class="navbar-toggler-icon screen-reader-text">Prefences Menu</span>
-				</button>				
-				<?php 
-					get_template_part( 'template-parts/prefences/darklight/darklight', 'btn' ); 
-					get_template_part( 'template-parts/prefences/langSwitch/langSwitch', 'btn' ); 
-					get_template_part( 'template-parts/prefences/search/search', 'btn' ); 
-					get_template_part( 'template-parts/prefences/login/login', 'btn' ); 
-				?>
-			</nav>
+					<span class="screen-reader-text">Prefences Menu</span>
+					<svg id="prefencesToggleIcon" 
+						viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" class="navbar-toggler-icon">
+          				<path id="path1" d="M 10,10 L 310,310 Z"></path>
+						<path id="path2" d="M 10,10 L 10,222.1 C 60,130 110,130 160,160 C 210,210 210,310 10,310  L 160,160" ></path>
+						<path id="path3" d="M 10,10 L 222.1,10 C 130,60 130,110 160,160 C 210,210 310,210 310,10 L 160,160" ></path>
+        			</svg>
+				</button>
+			
 		</div>
-		<div class="secondary-bar">
-		</div>
-
 	</header>
 <?php 
 	get_template_part( 'template-parts/sections/hero', 'header' );

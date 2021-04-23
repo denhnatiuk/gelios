@@ -16,6 +16,7 @@ function gelios_scripts() {
 
 	// wp_enqueue_script( 'jquery', get_template_directory_uri() . '/lib/jquery/dist/jquery.min.js', array(),  $css_version, true );
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/lib/bootstrap/dist/js/bootstrap.min.js', array('jquery'),  $css_version, true );
+	wp_enqueue_script( 'anime-js', get_template_directory_uri() . '/lib/anime.min.js', array('jquery'),  $css_version, true );
 	wp_enqueue_script( 'darklight', get_template_directory_uri() . '/template-parts/prefences/darklight/darklight.js', array(),  $css_version, true );
 	wp_enqueue_script( 'langSwitch', get_template_directory_uri() . '/template-parts/prefences/langSwitch/langSwitch.js', array(),  $css_version, true );
 	// wp_enqueue_script( 'gelios-navigation', get_template_directory_uri() . '/js/navigation.js', array(),  $css_version, true );

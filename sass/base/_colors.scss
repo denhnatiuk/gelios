@@ -87,12 +87,12 @@ body{
         }
     }
 }
-.secondary-bar{
+.prefences-navbar{
     // background: linear-gradient(to bottom, var(--brand-color-bg), transparent);
-    // background: linear-gradient(to bottom, transparent 0%, transparent 80%, var(--brand-color-shade));
+    background: linear-gradient(to bottom, transparent 0%, transparent 80%, var(--brand-color-shade) 100%);
     //background: linear-gradient(to bottom, transparent 0%, transparent 80%, var(--brand-color-shade));
     // background: var(--brand-color-shade);
-    border-bottom: 2px solid transparent;
+    // border-bottom: 2px solid transparent;
 }
 #landingNav{
     .menu-toggle{
