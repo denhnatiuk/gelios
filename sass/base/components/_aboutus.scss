@@ -1,0 +1,36 @@
+section#aboutus{
+    justify-content: flex-start;
+    align-items: flex-start;
+    & [data-toggle="pill"]{
+        margin:1rem 0 0 0;
+        padding-right:1rem;
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        &:before{
+            content:"";
+            display: block;
+            width:0;
+            height:inherit;
+            margin:-1rem -1rem -1rem 0;
+            background: var(--theme-color-main);
+            transition: all .5s ease-out;
+
+        }
+    }
+    & .active[data-toggle="pill"]{
+        margin:1rem 0 0 0;
+        padding-right: 0;
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        &:before{
+            content:"";
+            display: block;
+            width:4rem;
+            height:inherit;
+            margin:-1rem -1rem -1rem -3rem;
+            // padding-right:3rem;
+            background: var(--theme-color-main);
+            transition: all .5s ease-out;
+        }
+    }
+}

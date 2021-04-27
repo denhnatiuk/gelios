@@ -1,21 +1,362 @@
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: $color__border-button;
-	border-radius: 3px;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, 0.8);
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+// button,
+// input[type="button"],
+// input[type="reset"],
+// input[type="submit"] {
+// 	border: 1px solid;
+// 	border-color: $color__border-button;
+// 	border-radius: 3px;
+// 	background: $color__background-button;
+// 	color: rgba(0, 0, 0, 0.8);
+// 	line-height: 1;
+// 	padding: 0.6em 1em 0.4em;
 
-	&:hover {
-		border-color: $color__border-button-hover;
-	}
+// 	&:hover {
+// 		border-color: $color__border-button-hover;
+// 	}
 
-	&:active,
-	&:focus {
-		border-color: $color__border-button-focus;
-	}
+// 	&:active,
+// 	&:focus {
+// 		border-color: $color__border-button-focus;
+// 	}
+// }
+
+// $brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+// $brand-success:         #5cb85c !default;
+// $brand-info:            #5bc0de !default;
+// $brand-warning:         #f0ad4e !default;
+// $brand-danger:          #d9534f !default;
+// .btn {
+//     display: inline-block;
+//     margin-bottom: 0; // For input.btn
+//     text-align: center;
+//     white-space: nowrap;
+//     vertical-align: middle;
+//     touch-action: manipulation;
+//     cursor: pointer;
+//     background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+//     border: 1px solid transparent;
+  
+//     // &,
+//     // &:active,
+//     // &.active {
+//     //   &:focus,
+//     //   &.focus {
+
+//     //   }
+//     // }
+  
+//     &:hover,
+//     &:focus,
+//     &.focus {
+//       text-decoration: none;
+//     }
+  
+//     &:active,
+//     &.active {
+//       background-image: none;
+//       outline: 0;
+//     }
+  
+//     &.disabled,
+//     &[disabled],
+//     fieldset[disabled] & {
+//       // cursor: $cursor-disabled;
+//     }
+  
+//     // [converter] extracted a& to a.btn
+//   }
+  
+//   a.btn {
+//     &.disabled,
+//     fieldset[disabled] & {
+//       pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+//     }
+//   }
+  
+  
+//   // Alternate buttons
+//   // --------------------------------------------------
+  
+//   .btn-default {
+//     @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+//   }
+//   .btn-primary {
+//     @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+//   }
+//   // Success appears as green
+//   .btn-success {
+//     @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+//   }
+//   // Info appears as blue-green
+//   .btn-info {
+//     @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+//   }
+//   // Warning appears as orange
+//   .btn-warning {
+//     @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+//   }
+//   // Danger and error appear as red
+//   .btn-danger {
+//     @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+//   }
+  
+  
+  // Link buttons
+  // -------------------------
+  
+  // // Make a button look and behave like a link
+  // .btn-link {
+  //   font-weight: 400;
+  //   color: $link-color;
+  //   border-radius: 0;
+  
+  //   &,
+  //   &:active,
+  //   &.active,
+  //   &[disabled],
+  //   fieldset[disabled] & {
+  //     background-color: transparent;
+  //     @include box-shadow(none);
+  //   }
+  //   &,
+  //   &:hover,
+  //   &:focus,
+  //   &:active {
+  //     border-color: transparent;
+  //   }
+  //   &:hover,
+  //   &:focus {
+  //     color: $link-hover-color;
+  //     text-decoration: $link-hover-decoration;
+  //     background-color: transparent;
+  //   }
+  //   &[disabled],
+  //   fieldset[disabled] & {
+  //     &:hover,
+  //     &:focus {
+  //       color: $btn-link-disabled-color;
+  //       text-decoration: none;
+  //     }
+  //   }
+  // }
+  
+  
+  // // Button Sizes
+  // // --------------------------------------------------
+  
+  // .btn-lg {
+  //   // line-height: ensure even-numbered height of button next to large input
+  //   @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large);
+  // }
+  // .btn-sm {
+  //   // line-height: ensure proper height of button next to small input
+  //   @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+  // }
+  // .btn-xs {
+  //   @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+  // }
+  
+  
+  // // Block button
+  // // --------------------------------------------------
+  
+  // .btn-block {
+  //   display: block;
+  //   width: 100%;
+  // }
+  
+  // // Vertically space out multiple block buttons
+  // .btn-block + .btn-block {
+  //   margin-top: 5px;
+  // }
+  
+  // // Specificity overrides
+  // input[type="submit"],
+  // input[type="reset"],
+  // input[type="button"] {
+  //   &.btn-block {
+  //     width: 100%;
+  //   }
+  // }
+
+  .button-group {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    border-radius: 7px;
+    padding: 4px;
+    &>button {
+        cursor: pointer;
+        flex: 1;
+        background-image: linear-gradient(to top, #242424 0%, #303030 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1px;
+        transition: 0.2s;
+        // font-size: 2.5em;
+        box-shadow: inset 0 20px 4px -21px rgba(255,255,255,0.4), 0 19px 13px 0 rgba(0,0,0,0.3);
+        // color: #181818;
+        position: relative;
+        z-index: 2;
+        // &:before {
+        //     content: "";
+        //     display: block;
+        //     width: 0.8em;
+        //     height: 0.8em;
+        //     transition: 0.1s;
+        //     background-image: radial-gradient(circle 30px at center, #ebf7ff 0%, #b3e1ff 47%, #b3e1ff 100%);
+        //     position: absolute;
+        //     filter: blur(15px);
+        //     top: 50%;
+        //     left: 50%;
+        //     border-radius: 50%;
+        //     transform: translate(-50%, -50%);
+        //     opacity: 0;
+        // }
+        // &:after {
+        //     content: "";
+        //     display: block;
+        //     height: 70px;
+        //     width: 1px;
+        //     position: absolute;
+        //     border-radius: 50%;
+        //     z-index: -1;
+        //     opacity: 0;
+        //     transition: 0.2s;
+        //     filter: blur(0px);
+        //     box-shadow: -75px 0 0px 0px rgba(179,225,255,0.3), 74px 0 0px 0px rgba(179,225,255,0.35);
+        // }
+        svg {
+            height: 2em;
+            width: 2em;
+            position: relative;
+            display: block;
+            fill: #181818;
+            filter: drop-shadow(0 1px 1px rgba(255,255,255,0.15)) url("#inset-shadow");
+        }
+        &.active {
+            background-image: linear-gradient(to top, #151515 0%, #1d1d1d 100%);
+            box-shadow: inset 0 16px 14px -21px transparent, 0 0px 13px 0 rgba(0,0,0,0.3), inset 0 0 7px 2px rgba(0,0,0,0.4);
+            z-index: 0;
+            &:before {
+                width: 1em;
+                height: 1em;
+                opacity: 0.8;
+            }
+            &:after {
+                opacity: 0;
+            }
+            svg {
+                fill: url("#active");
+                filter: drop-shadow(0 1px 1px rgba(255,255,255,0));
+            }
+        }
+        &:first-of-type {
+            border-radius: 4px 0 0 4px;
+            flex-basis: 1;
+            &:after {
+                box-shadow: -85px 0 18px 1px transparent, 83px 0 12px 1px #b3e1ff;
+            }
+        }
+        &:last-of-type {
+            border-radius: 0 4px 4px 0;
+            flex-basis: 2;
+            &:after {
+                box-shadow: -85px 0 18px 1px #b3e1ff, 83px 0 12px 1px transparent;
+            }
+        }
+    }
+}
+.shine{
+  position: relative;
+  overflow: hidden;
+  // width: 50px;
+  // height: 50px;
+  // display: inline-block;
+
+  // border-radius: 5px;
+  // text-decoration: none;
+  // text-align: center;
+  // line-height: 50px;
+  // font-size: 12px;
+  // font-family: sans-serif;
+  // margin: 25px 0 25px 25px;
+  // color: #fff;
+  // background: cornflowerblue;
+  &:after {
+      content: "";
+      position: absolute;
+      top: -210%;
+      left: -310%;
+      width: 300%;
+      height: 300%;
+      opacity: 0;
+      transform: skew(30deg);
+  
+      background: rgba(255, 255, 255, 0.13);
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.13) 0%,
+        rgba(255, 255, 255, 0.13) 77%,
+        rgba(255, 255, 255, 0.5) 92%,
+        rgba(255, 255, 255, 0.0) 100%
+      );
+  }
+  &:hover:after {
+      opacity: 1;
+      top: -30%;
+      left: -30%;
+      transition-property: left, top, opacity;
+      transition-duration: 0.7s, 0.7s, 0.15s;
+      transition-timing-function: ease;
+  }
+  &:active:after {
+      opacity: 0;
+  }
+}
+// button{
+//     min-width:2rem;
+//     min-height:2rem;
+//     outline:none;
+//     padding:0.25rem;
+//     &.btn-success{
+//         color:white;
+//         background-color:#5cb85c;
+//     }
+// }
+.btn{
+  outline:none;
+  &:focus, .focus{
+      box-shadow: none;
+  }
+  &-shade{
+    display: flex;
+    flex-flow: row nowrap;
+    .icon{
+        margin:0 .5rem;
+    }
+    span{
+        padding:0 .5rem;
+    }
+
+    //   &:hover{}
+    &.active{
+    .icon{
+        display: block;        
+    }
+    //   span{}
+    }
+  }
+}
+.btn-skew{
+    transform: skew(-25deg);
+    span{
+        transform: skew(0);
+    }
+}
+@media screen and (max-width:30rem){
+    .btn-skew-sm{
+        transform: skew(-25deg);
+    }   
 }

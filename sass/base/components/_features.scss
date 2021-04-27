@@ -1,0 +1,30 @@
+#features{
+    .jumbotron{
+        box-shadow: 1px 1px 5px var(--theme-color-dark);
+        transition: all 0.5s ease-in-out;
+        h5{
+            display: block;
+            &:after{
+                content: "";
+                display: block;
+                position: relative;
+                width:0;
+                height:3px;
+                background-color: var(--theme-color-main);                
+                
+            }            
+        }
+        p{
+            text-align: justify;
+        }
+        &:hover {
+            h5:after{
+                width:100%;
+                transition: all 0.5s ease-in-out;
+            }
+            p.text-muted{
+                color:var(--theme-color-text) !important;
+            }
+        }
+    }
+}

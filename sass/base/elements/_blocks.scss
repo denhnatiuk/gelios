@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+    outline:none;
+}
+
+html, body {
+	box-sizing: border-box;
+	max-width:100vw;
+	overflow-x: hidden;
+	display: block;
+    width:100vw;
+    max-width:100vw;
+}
+
+
+section{
+    position: relative;
+    min-height:100vh;
+    width:100vw;
+    padding-top:6.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    // mix-blend-mode: difference;
+}
+
+.jumbotron{
+    padding: 2rem;
+    .icon{
+        box-sizing: border-box;
+        border-radius: 50%;
+        width:3rem;
+        height:3rem;
+        padding:0.5rem;
+        svg{
+            width:2rem;
+            height:2rem;
+        }
+    }
+    &-overflowed{
+        --layer-z-index: 1;
+        position: absolute;
+        // bottom:0;
+        // right:0;
+        top:2rem;
+        left:2rem;
+        z-index:var(--layer-z-index);
+        width:60%;
+        
+        padding:0.25rem 1rem;
+        border:1px solid var(--theme-color-main);
+        border-radius:5px;
+
+        .icon{
+            display: block;
+            float: right;
+        }
+        h5{ margin-top: 0;}
+
+        + .jumbotron-overflowed{
+            // bottom: 5rem;
+            // right:5rem;
+            --layer-z-index:calc(var(--layer-z-index) + 1);
+            z-index:var(--layer-z-index);
+            top:5rem;
+            left:5rem;
+            padding:0.25rem 1rem;
+
+            h5{ margin-top: 0;}
+            
+            + .jumbotron-overflowed{
+                --layer-z-index:calc(var(--layer-z-index) + 1);
+                z-index:var(--layer-z-index);
+                // bottom:10rem;
+                // right:10rem;
+                top:5rem;
+                left:5rem;
+                
+                padding:0.25rem 1rem;
+
+                h5{ margin-top: 0;}
+
+                &:hover{
+                    z-index:10;
+                }
+            }
+        }
+        &:hover{
+            z-index:10;
+        }
+    }
+    &.tab-pane{
+        min-width:50vw;
+        max-width:90vw;
+        min-height: 50vh;
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+.well {
+    min-width:300px;
+    min-height:300px;
+}
+.container-bg{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    z-index:-1;
+    &-cover{
+      background-position:center;
+      background-attachment:fixed;
+      background-size:cover;
+      background-repeat:no-repeat;
+    }
+    &-filter{
+        filter:  grayscale(35%) sepia(35%) brightness(63%) hue-rotate(22deg) contrast(100%);
+    }
+}

@@ -1,4 +1,5 @@
 <section class="container" id="features">
+    <h2 class="text-right"><span class="text-danger">Наші</span> переваги</h2>
     <div class="row">
         <div class=" jumbotron col-12 col-sm-5 offset-sm-1 col-lg-3 offset-lg-1 aos-init aos-animate" data-aos="fade-up">
             <div class="icon text-primary align-self-end">

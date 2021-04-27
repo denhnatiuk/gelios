@@ -1,0 +1,31 @@
+.img-skewed {
+    -webkit-perspective: 1500px;
+    perspective: 1500px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    &-left {
+        -webkit-perspective-origin: left center;
+        perspective-origin: left center;
+        & .img-skewed-item {
+            -webkit-transform: rotateY(-35deg) rotateX(15deg);
+            transform: rotateY(-35deg) rotateX(15deg);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+    }
+}
+.bg-shape{
+    position: absolute;
+    right:10%;
+    // max-width: 60%;
+    z-index:-1;
+    &-fluid{
+        width:100vw;
+        right: 0;
+        left: 0;
+    }
+    &-bottom{
+        bottom: -10rem;       
+        min-height: 4rem; 
+    }
+}

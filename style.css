@@ -18,9 +18,11 @@ This theme, like WordPress, is licensed under the GPL.
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+# Abstracts
+	- Variables
+	- Mixins
 # Generic
-	- Normalize
-	- Box sizing
+	- Bootstrap CSS framework
 # Base
 	- Colors
 	- Typography
@@ -44,334 +46,24 @@ This theme, like WordPress, is licensed under the GPL.
 
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+# Abstracts (Mixins and Variables)
+--------------------------------------------------------------*/
+:root {
+	--brand-color-main: #b22222;
+	--brand-color-dark: black;
+	--brand-color-light: white;
+	--brand-color-shade:#222;
+	--brand-color-background: rgba(64,64,64,1);
+	--brand-color-accent:#778899;
+	--brand-color-accent2:#6980fe;
+	--brand-color-text: whitesmoke;
+}
+
+/*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
 /* Normalize--------------------------------------------- */
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/* Document
-	 ========================================================================== */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-html {
-	line-height: 1.15;
-	-webkit-text-size-adjust: 100%;
-}
-
-/* Sections
-	 ========================================================================== */
-/**
- * Remove the margin in all browsers.
- */
-body {
-	margin: 0;
-}
-
-/**
- * Render the `main` element consistently in IE.
- */
-main {
-	display: block;
-}
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
-}
-
-/* Grouping content
-	 ========================================================================== */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-hr {
-	box-sizing: content-box;
-	height: 0;
-	overflow: visible;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-pre {
-	font-family: monospace, monospace;
-	font-size: 1em;
-}
-
-/* Text-level semantics
-	 ========================================================================== */
-/**
- * Remove the gray background on active links in IE 10.
- */
-a {
-	background-color: transparent;
-}
-
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-abbr[title] {
-	border-bottom: none;
-	text-decoration: underline;
-	text-decoration: underline dotted;
-}
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-b,
-strong {
-	font-weight: bolder;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code,
-kbd,
-samp {
-	font-family: monospace, monospace;
-	font-size: 1em;
-}
-
-/**
- * Add the correct font size in all browsers.
- */
-small {
-	font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-sub,
-sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-
-sub {
-	bottom: -0.25em;
-}
-
-sup {
-	top: -0.5em;
-}
-
-/* Embedded content
-	 ========================================================================== */
-/**
- * Remove the border on images inside links in IE 10.
- */
-img {
-	border-style: none;
-}
-
-/* Forms
-	 ========================================================================== */
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-button,
-input,
-optgroup,
-select,
-textarea {
-	font-family: inherit;
-	font-size: 100%;
-	line-height: 1.15;
-	margin: 0;
-}
-
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-button,
-input {
-	overflow: visible;
-}
-
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-button,
-select {
-	text-transform: none;
-}
-
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-	-webkit-appearance: button;
-}
-
-/**
- * Remove the inner border and padding in Firefox.
- */
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-	border-style: none;
-	padding: 0;
-}
-
-/**
- * Restore the focus styles unset by the previous rule.
- */
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-	outline: 1px dotted ButtonText;
-}
-
-/**
- * Correct the padding in Firefox.
- */
-fieldset {
-	padding: 0.35em 0.75em 0.625em;
-}
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *		`fieldset` elements in all browsers.
- */
-legend {
-	box-sizing: border-box;
-	color: inherit;
-	display: table;
-	max-width: 100%;
-	padding: 0;
-	white-space: normal;
-}
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-progress {
-	vertical-align: baseline;
-}
-
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-textarea {
-	overflow: auto;
-}
-
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-[type="checkbox"],
-[type="radio"] {
-	box-sizing: border-box;
-	padding: 0;
-}
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-	height: auto;
-}
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-[type="search"] {
-	-webkit-appearance: textfield;
-	outline-offset: -2px;
-}
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
-}
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-::-webkit-file-upload-button {
-	-webkit-appearance: button;
-	font: inherit;
-}
-
-/* Interactive
-	 ========================================================================== */
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-details {
-	display: block;
-}
-
-/*
- * Add the correct display in all browsers.
- */
-summary {
-	display: list-item;
-}
-
-/* Misc
-	 ========================================================================== */
-/**
- * Add the correct display in IE 10+.
- */
-template {
-	display: none;
-}
-
-/**
- * Add the correct display in IE 10.
- */
-[hidden] {
-	display: none;
-}
-
-/* Box sizing--------------------------------------------- */
-/* Inherit box-sizing to more easily change it's value on a component level.
-@link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
-}
-
-html, body {
-	box-sizing: border-box;
-	max-width: 100vw;
-	overflow-x: hidden;
-}
-
-/* Bootstrap--------------------------------------------- */
+/* Bootstrap framework----------------------------------- */
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10062,8 +9754,45 @@ a.text-dark:hover, a.text-dark:focus {
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-:root {
-	--brand-color-text:#fafad2;
+body {
+	--theme-color-main: var(--brand-color-main);
+	--theme-color-dark: var(--brand-color-dark);
+	--theme-color-light: var(brand-color-light);
+	--theme-color-shade: var(--brand-color-shade);
+	--theme-color-background: var(--brand-color-background);
+	--theme-color-accent: var(--brand-color-accent);
+	--theme-color-text: var(--brand-color-text);
+	transition: all .5s ease-out;
+}
+
+body.darklight-dark {
+	--theme-color-main: var(--brand-color-main);
+	--theme-color-dark: var(--brand-color-dark);
+	--theme-color-light: var(--brand-color-light);
+	--theme-color-shade: var(--brand-color-shade);
+	--theme-color-background: var(--brand-color-background);
+	--theme-color-accent: var(--brand-color-accent);
+	--theme-color-text: var(--brand-color-text);
+	transition: all .5s ease-out;
+}
+
+body.darklight-dark .container-bg-filter {
+	filter: grayscale(35%) sepia(35%) brightness(63%) hue-rotate(22deg) contrast(100%);
+}
+
+body.darklight-light {
+	--theme-color-main: coral;
+	--theme-color-dark: var(--brand-color-light);
+	--theme-color-light: var(--brand-color-dark);
+	--theme-color-shade: var(--brand-color-accent);
+	--theme-color-background: var(--brand-color-light);
+	--theme-color-accent: var(--brand-color-text);
+	--theme-color-text: var(--brand-color-dark);
+	transition: all .5s ease-out;
+}
+
+body.darklight-light .container-bg-filter {
+	filter: none;
 }
 
 a, button {
@@ -10082,46 +9811,9 @@ a:visited, button:visited {
 
 a.btn-default, button.btn-default {
 	background: transparent;
-	border: 1px solid var(--background-color-main, brown);
-	color: var(--background-color-main, brown);
+	border: 1px solid var(--theme-color-main, brown);
+	color: var(--theme-color-main, brown);
 	border-radius: 5px;
-}
-
-body {
-	--brand-color-main: #b22222;
-	--brand-color-dark: black;
-	--brand-color-light: white;
-	--brand-color-shade:#222;
-	--brand-color-background: rgba(64,64,64,1);
-	--brand-color-accent:#778899;
-	--brand-color-text: whitesmoke;
-	--theme-color-main: var(--brand-color-main);
-	--theme-color-dark: var(--brand-color-dark);
-	--theme-color-light: var(brand-color-light);
-	--theme-color-shade: var(--brand-color-shade);
-	--theme-color-background: var(--brand-color-background);
-	--theme-color-accent: var(--brand-color-accent);
-	--theme-color-text: var(--brand-color-text);
-}
-
-body.darklight-dark {
-	--theme-color-main: var(--brand-color-main);
-	--theme-color-dark: var(--brand-color-dark);
-	--theme-color-light: var(--brand-color-light);
-	--theme-color-shade: var(--brand-color-shade);
-	--theme-color-background: var(--brand-color-background);
-	--theme-color-accent: var(--brand-color-accent);
-	--theme-color-text: var(--brand-color-text);
-}
-
-body.darklight-light {
-	--theme-color-main: coral;
-	--theme-color-dark: var(--brand-color-light);
-	--theme-color-light: var(--brand-color-dark);
-	--theme-color-shade: var(--brand-color-accent);
-	--theme-color-background: var(--brand-color-light);
-	--theme-color-accent: var(--brand-color-text);
-	--theme-color-text: var(--brand-color-dark);
 }
 
 body {
@@ -10129,27 +9821,27 @@ body {
 	color: var(--theme-color-text);
 }
 
-.primary-bar {
+#masthead .secondary-bar .prefences-navbar {
+	border-bottom: 3px solid var(--theme-color-shade);
+}
+
+#masthead .primary-bar {
+	background-color: var(--theme-color-shade);
+}
+
+#masthead .primary-bar .site-branding .site-logo:before {
 	background: var(--theme-color-shade);
 }
 
-.primary-bar .site-logo:before {
-	background: var(--theme-color-shade);
-}
-
-.primary-bar .brand-title, .primary-bar .site-title {
+#masthead .primary-bar .site-branding .brand-title, #masthead .primary-bar .site-branding .site-title {
 	color: var(--theme-color-text, whitesmoke);
 }
 
-.primary-bar .brand-title:before, .primary-bar .site-title:before {
+#masthead .primary-bar .site-branding .brand-title:before, #masthead .primary-bar .site-branding .site-title:before {
 	color: var(--theme-color-main);
 }
 
-.prefences-navbar {
-	background: linear-gradient(to bottom, transparent 0%, transparent 80%, var(--brand-color-shade) 100%);
-}
-
-#landingNav .menu-toggle {
+#masthead .primary-bar .main-navigation .menu-toggle {
 	background: var(--theme-color-main);
 	color: var(--theme-color-text);
 }
@@ -10174,6 +9866,23 @@ body {
 
 .jumbotron:hover .icon svg {
 	fill: var(--theme-color-shade);
+}
+
+.btn {
+	outline: none;
+}
+
+.btn:focus, .btn .focus {
+	box-shadow: none;
+}
+
+.btn-shade {
+	background: var(--theme-color-shade);
+	color: var(--theme-color-text);
+}
+
+.btn-shade:hover {
+	color: var(--theme-color-text);
 }
 
 @font-face {
@@ -10294,11 +10003,21 @@ nav ul li {
 	margin: 0 1rem;
 }
 
-body {
+/** Elements*/
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	outline: none;
+}
+
+html, body {
+	box-sizing: border-box;
+	max-width: 100vw;
+	overflow-x: hidden;
 	display: block;
 	width: 100vw;
 	max-width: 100vw;
-	overflow-x: hidden;
 }
 
 section {
@@ -10309,23 +10028,6 @@ section {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-}
-
-.bg-container {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-}
-
-.well {
-	min-width: 300px;
-	min-height: 300px;
-}
-
-.icon {
-	width: 32px;
-	height: 32px;
 }
 
 .jumbotron {
@@ -10405,87 +10107,97 @@ section {
 	background: rgba(0, 0, 0, 0.5);
 }
 
-.img-skewed {
-	-webkit-perspective: 1500px;
-	perspective: 1500px;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
+.well {
+	min-width: 300px;
+	min-height: 300px;
 }
 
-.img-skewed-left {
-	-webkit-perspective-origin: left center;
-	perspective-origin: left center;
-}
-
-.img-skewed-left .img-skewed-item {
-	-webkit-transform: rotateY(-35deg) rotateX(15deg);
-	transform: rotateY(-35deg) rotateX(15deg);
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-#features .jumbotron {
-	box-shadow: 1px 1px 5px var(--theme-color-dark);
-	transition: all 0.5s ease-in-out;
-}
-
-#features .jumbotron h5 {
-	display: block;
-}
-
-#features .jumbotron h5:after {
-	content: "";
-	display: block;
-	position: relative;
-	width: 0;
-	height: 3px;
-	background-color: var(--theme-color-main);
-}
-
-#features .jumbotron p {
-	text-align: justify;
-}
-
-#features .jumbotron:hover h5:after {
+.container-bg {
+	position: absolute;
 	width: 100%;
-	transition: all 0.5s ease-in-out;
+	height: 100%;
+	z-index: -1;
 }
 
-#features .jumbotron:hover p.text-muted {
-	color: var(--theme-color-text) !important;
+.container-bg-cover {
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
-.btn {
-	outline: none;
+.container-bg-filter {
+	filter: grayscale(35%) sepia(35%) brightness(63%) hue-rotate(22deg) contrast(100%);
 }
 
-.btn-shade {
+.button-group {
+	position: relative;
+	z-index: 2;
 	display: flex;
-	flex-flow: row nowrap;
-	margin-bottom: 2rem;
-	background: var(--theme-color-shade);
-	color: var(--theme-color-text);
+	border-radius: 7px;
+	padding: 4px;
 }
 
-.btn-shade .icon {
-	margin-right: .5rem;
+.button-group > button {
+	cursor: pointer;
+	flex: 1;
+	background-image: linear-gradient(to top, #242424 0%, #303030 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1px;
+	transition: 0.2s;
+	box-shadow: inset 0 20px 4px -21px rgba(255, 255, 255, 0.4), 0 19px 13px 0 rgba(0, 0, 0, 0.3);
+	position: relative;
+	z-index: 2;
 }
 
-.btn-shade span {
-	padding-left: .5rem;
-	border-left: 3px solid transparent;
-}
-
-.btn-shade:hover {
-	color: var(--theme-color-text);
-}
-
-.btn-shade.active .icon {
+.button-group > button svg {
+	height: 2em;
+	width: 2em;
+	position: relative;
 	display: block;
+	fill: #181818;
+	filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.15)) url("#inset-shadow");
 }
 
-.btn-shade.active span {
-	border-left-color: var(--theme-color-main);
+.button-group > button.active {
+	background-image: linear-gradient(to top, #151515 0%, #1d1d1d 100%);
+	box-shadow: inset 0 16px 14px -21px transparent, 0 0px 13px 0 rgba(0, 0, 0, 0.3), inset 0 0 7px 2px rgba(0, 0, 0, 0.4);
+	z-index: 0;
+}
+
+.button-group > button.active:before {
+	width: 1em;
+	height: 1em;
+	opacity: 0.8;
+}
+
+.button-group > button.active:after {
+	opacity: 0;
+}
+
+.button-group > button.active svg {
+	fill: url("#active");
+	filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0));
+}
+
+.button-group > button:first-of-type {
+	border-radius: 4px 0 0 4px;
+	flex-basis: 1;
+}
+
+.button-group > button:first-of-type:after {
+	box-shadow: -85px 0 18px 1px transparent, 83px 0 12px 1px #b3e1ff;
+}
+
+.button-group > button:last-of-type {
+	border-radius: 0 4px 4px 0;
+	flex-basis: 2;
+}
+
+.button-group > button:last-of-type:after {
+	box-shadow: -85px 0 18px 1px #b3e1ff, 83px 0 12px 1px transparent;
 }
 
 .shine {
@@ -10519,11 +10231,181 @@ section {
 	opacity: 0;
 }
 
+.btn {
+	outline: none;
+}
+
+.btn:focus, .btn .focus {
+	box-shadow: none;
+}
+
+.btn-shade {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.btn-shade .icon {
+	margin: 0 .5rem;
+}
+
+.btn-shade span {
+	padding: 0 .5rem;
+}
+
+.btn-shade.active .icon {
+	display: block;
+}
+
+.btn-skew {
+	transform: skew(-25deg);
+}
+
+.btn-skew span {
+	transform: skew(0);
+}
+
+@media screen and (max-width: 30rem) {
+	.btn-skew-sm {
+		transform: skew(-25deg);
+	}
+}
+
+.icon {
+	width: 2rem;
+	height: 2rem;
+}
+
+.icon svg {
+	width: 2rem;
+	height: 2rem;
+}
+
+.svg-filters {
+	height: 0;
+	width: 0;
+}
+
+.img-skewed {
+	-webkit-perspective: 1500px;
+	perspective: 1500px;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.img-skewed-left {
+	-webkit-perspective-origin: left center;
+	perspective-origin: left center;
+}
+
+.img-skewed-left .img-skewed-item {
+	-webkit-transform: rotateY(-35deg) rotateX(15deg);
+	transform: rotateY(-35deg) rotateX(15deg);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.bg-shape {
+	position: absolute;
+	right: 10%;
+	z-index: -1;
+}
+
+.bg-shape-fluid {
+	width: 100vw;
+	right: 0;
+	left: 0;
+}
+
+.bg-shape-bottom {
+	bottom: -10rem;
+	min-height: 4rem;
+}
+
+/** Components*/
+#features .jumbotron {
+	box-shadow: 1px 1px 5px var(--theme-color-dark);
+	transition: all 0.5s ease-in-out;
+}
+
+#features .jumbotron h5 {
+	display: block;
+}
+
+#features .jumbotron h5:after {
+	content: "";
+	display: block;
+	position: relative;
+	width: 0;
+	height: 3px;
+	background-color: var(--theme-color-main);
+}
+
+#features .jumbotron p {
+	text-align: justify;
+}
+
+#features .jumbotron:hover h5:after {
+	width: 100%;
+	transition: all 0.5s ease-in-out;
+}
+
+#features .jumbotron:hover p.text-muted {
+	color: var(--theme-color-text) !important;
+}
+
+section#aboutus {
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+section#aboutus [data-toggle="pill"] {
+	margin: 1rem 0 0 0;
+	padding-right: 1rem;
+	display: flex;
+	flex-flow: row-reverse nowrap;
+}
+
+section#aboutus [data-toggle="pill"]:before {
+	content: "";
+	display: block;
+	width: 0;
+	height: inherit;
+	margin: -1rem -1rem -1rem 0;
+	background: var(--theme-color-main);
+	transition: all .5s ease-out;
+}
+
+section#aboutus .active[data-toggle="pill"] {
+	margin: 1rem 0 0 0;
+	padding-right: 0;
+	display: flex;
+	flex-flow: row-reverse nowrap;
+}
+
+section#aboutus .active[data-toggle="pill"]:before {
+	content: "";
+	display: block;
+	width: 4rem;
+	height: inherit;
+	margin: -1rem -1rem -1rem -3rem;
+	background: var(--theme-color-main);
+	transition: all .5s ease-out;
+}
+
+body::-webkit-scrollbar {
+	width: 0.5em;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: linear-gradient(to left, var(--brand-color-accent), var(--brand-color-accent) 5px, var(--brand-color-dark));
+}
+
 header.fixed-top-bar {
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
+	z-index: 1000;
 	width: 100vw;
 	height: 6.25rem;
 	display: block;
@@ -10531,11 +10413,12 @@ header.fixed-top-bar {
 
 header.fixed-top-bar .secondary-bar {
 	z-index: -1;
+	top: 3.125rem;
 }
 
 header.fixed-top-bar .primary-bar {
 	box-sizing: border-box;
-	z-index: 1000;
+	z-index: 1002;
 	flex-grow: 1;
 	width: calc(100vw - 6.25rem);
 	height: 3.125rem;
@@ -10617,7 +10500,6 @@ header.fixed-top-bar .primary-bar .site-branding .site-description {
 		display: block;
 		position: relative;
 		visibility: visible;
-		transform: skew(-25deg);
 	}
 }
 
@@ -10653,101 +10535,11 @@ header.fixed-top-bar .primary-bar .site-branding .site-description {
 	transition: all .5s ease-in-out;
 }
 
-.bg-shape {
-	position: absolute;
-	right: 10%;
-	z-index: -1;
-}
-
-.bg-shape-fluid {
-	width: 100vw;
-	right: 0;
-	left: 0;
-}
-
-.bg-shape-bottom {
-	bottom: -4rem;
-	min-height: 4rem;
-}
-
-.button-group {
-	position: relative;
-	z-index: 2;
-	display: flex;
-	border-radius: 7px;
-	padding: 4px;
-}
-
-.button-group > button {
-	cursor: pointer;
-	flex: 1;
-	background-image: linear-gradient(to top, #242424 0%, #303030 100%);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 1px;
-	transition: 0.2s;
-	box-shadow: inset 0 20px 4px -21px rgba(255, 255, 255, 0.4), 0 19px 13px 0 rgba(0, 0, 0, 0.3);
-	position: relative;
-	z-index: 2;
-}
-
-.button-group > button svg {
-	height: 2em;
-	width: 2em;
-	position: relative;
-	display: block;
-	fill: #181818;
-	filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.15)) url("#inset-shadow");
-}
-
-.button-group > button.active {
-	background-image: linear-gradient(to top, #151515 0%, #1d1d1d 100%);
-	box-shadow: inset 0 16px 14px -21px transparent, 0 0px 13px 0 rgba(0, 0, 0, 0.3), inset 0 0 7px 2px rgba(0, 0, 0, 0.4);
-	z-index: 0;
-}
-
-.button-group > button.active:before {
-	width: 1em;
-	height: 1em;
-	opacity: 0.8;
-}
-
-.button-group > button.active:after {
-	opacity: 0;
-}
-
-.button-group > button.active svg {
-	fill: url("#active");
-	filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0));
-}
-
-.button-group > button:first-of-type {
-	border-radius: 4px 0 0 4px;
-	flex-basis: 1;
-}
-
-.button-group > button:first-of-type:after {
-	box-shadow: -85px 0 18px 1px transparent, 83px 0 12px 1px #b3e1ff;
-}
-
-.button-group > button:last-of-type {
-	border-radius: 0 4px 4px 0;
-	flex-basis: 2;
-}
-
-.button-group > button:last-of-type:after {
-	box-shadow: -85px 0 18px 1px #b3e1ff, 83px 0 12px 1px transparent;
-}
-
-.svg-filters {
-	height: 0;
-	width: 0;
-}
-
 #prefencesToggleButton {
+	height: 3.5rem;
+	margin-top: -.5rem;
 	order: 3;
-	background-color: #49aed9;
+	background-color: var(--theme-color-main);
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -10755,80 +10547,46 @@ header.fixed-top-bar .primary-bar .site-branding .site-description {
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
 	transition: all 1s;
+	z-index: 1003;
 }
 
 #prefencesToggleButton svg {
-	width: 1rem;
+	width: 1.75rem;
+	fill: var(--theme-color-shade);
 	cursor: pointer;
+	margin: 0.3rem 0;
 	transform-origin: center center;
 	transition: all 1s ease-in-out;
 }
 
-#prefencesToggleButton svg path {
-	stroke: #fff;
-	stroke-width: 20;
-	fill: none;
-}
-
-#prefencesToggleButton svg #path2 {
-	--animation-duration: 1.5s;
-	stroke-dasharray: 212.1 1000;
-	stroke-dashoffset: -690;
-	transition: all 1s ease-in-out;
-}
-
-#prefencesToggleButton svg #path3 {
-	stroke-dasharray: 212.1 1000;
-	stroke-dashoffset: -690;
-	transition: all 1s ease-in-out;
-}
-
-#prefencesToggleButton svg .arrow {
-	box-shadow: 0 0 2px 2px rgba(17, 34, 51, 0.32);
-}
-
-#prefencesToggleButton svg .arrow svg {
-	transform: rotateZ(-135deg);
-}
-
-#prefencesToggleButton svg .arrow #path2, #prefencesToggleButton svg .arrow #path3 {
-	stroke-dashoffset: 0;
-}
-
 #prefencesNav {
 	position: fixed;
-	top: -1px;
 	right: 0;
 	width: 100%;
-	z-index: 1;
-	--animation-duration: 1s;
 }
 
 #prefencesNav .prefences-navbar {
 	z-index: 1;
 	position: absolute;
-	top: 3.124rem;
 	right: 0;
 	flex-grow: 1;
 	width: calc(100vw - 5rem);
-	height: 3.125rem;
+	height: 2.85rem;
 	display: flex;
 	flex-flow: row-reverse wrap;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: flex-start;
 	padding: 0;
 	margin-left: 6.25rem;
-	transition: all var(--animation-duration);
+	transition: all 1s;
 }
 
 #prefencesNav .prefences-navbar.hide {
 	transform: translateY(-100px);
 }
 
-body #darklight {
-	width: 2rem;
-	height: 2rem;
-	padding: 0.125rem 0;
+header .nav-link.shine:hover {
+	border-bottom: 2px solid var(--theme-color-main);
 }
 
 body.darklight-light #darklight {
@@ -10836,7 +10594,7 @@ body.darklight-light #darklight {
 }
 
 body.darklight-light #darklight:before {
-	content: "☾";
+	content: "🌙";
 	display: block;
 	position: relative;
 	width: 2rem;
@@ -10848,23 +10606,159 @@ body.darklight-dark #darklight {
 }
 
 body.darklight-dark #darklight:before {
-	content: "☀";
+	content: "☀️";
 	display: block;
 	position: relative;
 	width: 2rem;
 	height: 2rem;
 }
 
-body::-webkit-scrollbar {
-	width: 0.5em;
+#darklight {
+	width: 2.75rem;
+	height: 2.75rem;
+	padding: 0.5rem;
+	margin: 0 .5rem;
 }
 
-body::-webkit-scrollbar-thumb {
-	background: linear-gradient(to left, var(--brand-color-accent), var(--brand-color-accent) 5px, var(--brand-color-dark));
+.search-box {
+	min-width: 2rem;
+	min-height: 2rem;
 }
 
-section#aboutus {
-	justify-content: flex-start;
+.search-box .searchform {
+	position: relative;
+	height: 2rem;
+	margin: 0.35rem 1rem;
+	border: 3px solid var(--theme-color-text);
+	border-radius: 1rem;
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.search-box .searchform input#s {
+	position: relative;
+	border: none;
+	background: transparent;
+	box-sizing: border-box;
+	height: 1.85rem;
+	width: 0;
+	line-height: 0;
+	vertical-align: top;
+	padding: 0px 0.75rem;
+	-webkit-transition: width .5s;
+	/* Safari */
+	transition: width .5s;
+	z-index: 2;
+	color: var(--theme-color-text);
+}
+
+.search-box .searchform input#s:focus {
+	width: 10rem;
+	outline: none;
+	margin-right: 2rem;
+}
+
+.search-box .searchform input#s:focus + .close span {
+	top: 0.65rem;
+	right: 0.5rem;
+}
+
+.search-box .searchform input#s:focus + .close span.back {
+	-webkit-transition: .5s .7s ease-in-out;
+	-moz-transition: .5s .7s ease-in-out;
+	-o-transition: .5s .7s ease-in-out;
+	transition: .5s .7s ease-in-out;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	opacity: 1;
+}
+
+.search-box .searchform .close {
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	top: 0px;
+	right: 0px;
+	-webkit-transition: .2s ease-in-out;
+	-moz-transition: .2s ease-in-out;
+	-o-transition: .2s ease-in-out;
+	transition: .2s ease-in-out;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.search-box .searchform .close span {
+	width: 1.25rem;
+	height: 0.25rem;
+	border-radius: 0.125rem;
+	display: block;
+	background: var(--theme-color-text);
+	position: absolute;
+	top: 30px;
+	right: -13px;
+	-webkit-transition: .2s .5s ease-in-out;
+	-moz-transition: .2s .5s ease-in-out;
+	-o-transition: .2s .5s ease-in-out;
+	transition: .2s .5s ease-in-out;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.search-box .searchform .close span.back {
+	top: 12px;
+	right: 5px;
+	opacity: 0;
+}
+
+.cta-form-wrapper {
+	width: 100%;
+	min-height: 6.75rem;
+	z-index: 10;
+	overflow: hidden;
+	margin-top: -2rem;
+}
+
+.cta-form-wrapper:before, .cta-form-wrapper:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	border-style: solid;
+	right: 0;
+	bottom: 0;
+}
+
+.cta-form-wrapper:before {
+	border-width: 0 0 200px 20px;
+	border-color: transparent transparent var(--theme-color-shade) transparent;
+	transform: rotate(15deg);
+}
+
+.cta-form-wrapper:after {
+	border-width: 0 0 20px 200px;
+	border-color: transparent transparent var(--theme-color-shade) transparent;
+	margin: -20px 28px 0 0;
+}
+
+.cta-form-wrapper .cta-contact-form {
+	position: absolute;
+	z-index: 2;
+	top: 100%;
+	transform: translate(400px, 400px);
+	opacity: 0;
+	transition: .5s ease-in-out;
+}
+
+.cta-form-wrapper .cta-contact-form.active {
+	top: 0;
+	transform: translate(0, 0);
+	opacity: 1;
+	transition: .5s ease-in-out;
 }
 
 /*--------------------------------------------------------------
@@ -10876,6 +10770,49 @@ section#aboutus {
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
+body.darklight-light #darklight {
+	background: transparent;
+}
+
+body.darklight-light #darklight:before {
+	content: "🌙";
+	display: block;
+	position: relative;
+	width: 2rem;
+	height: 2rem;
+}
+
+body.darklight-dark #darklight {
+	background: transparent;
+}
+
+body.darklight-dark #darklight:before {
+	content: "☀️";
+	display: block;
+	position: relative;
+	width: 2rem;
+	height: 2rem;
+}
+
+#darklight {
+	width: 2.75rem;
+	height: 2.75rem;
+	padding: 0.5rem;
+	margin: 0 .5rem;
+}
+
+#scrollToTop {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#scrollToTop button {
+	position: absolute;
+	top: 100vh;
+	right: 0;
+}
+
 /* Jetpack infinite scroll
 --------------------------------------------- */
 /*--------------------------------------------------------------

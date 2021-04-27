@@ -1,15 +1,16 @@
 body{
-    #darklight{        
-        width: 2rem;
-        height:2rem;
-        padding:0.125rem 0;
-    }
+    // #darklight{        
+    //     width: 2rem;
+    //     height:2rem;
+    //     padding:0.25rem;
+    // }
     &.darklight-light{
         #darklight{        
             background:transparent;
         }
         #darklight:before{
-            content:"☾";
+            // content:"☾";
+            content:"🌙";
             display: block;
             position: relative;
             width:2rem;
@@ -21,11 +22,18 @@ body{
             background:transparent;
         }
         #darklight:before{
-            content:"☀";
+            // content:"☀";
+            content:"☀️";
             display: block;
             position: relative;
             width:2rem;
             height:2rem;
         }
     }
+}
+#darklight{        
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0.5rem;
+    margin: 0 .5rem;
 }

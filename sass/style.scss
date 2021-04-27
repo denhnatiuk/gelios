@@ -18,9 +18,11 @@ This theme, like WordPress, is licensed under the GPL.
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+# Abstracts
+	- Variables
+	- Mixins
 # Generic
-	- Normalize
-	- Box sizing
+	- Bootstrap CSS framework
 # Base
 	- Colors
 	- Typography
@@ -44,18 +46,20 @@ This theme, like WordPress, is licensed under the GPL.
 
 --------------------------------------------------------------*/
 
-// Import variables and mixins.
-@import "variables";
-
+/*--------------------------------------------------------------
+# Abstracts (Mixins and Variables)
+--------------------------------------------------------------*/
+@import "abstracts/variables";
+@import "abstracts/mixins";
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
 	/* Normalize--------------------------------------------- */
-	@import "generic/normalize";
-	/* Box sizing--------------------------------------------- */
-	@import "generic/box-sizing";
-	/* Bootstrap--------------------------------------------- */
+	// @import "generic/normalize"; /** contains in bootstrap */
+	
+	/* Bootstrap framework----------------------------------- */
 	@import "../lib/bootstrap/scss/bootstrap.scss";
+
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
@@ -75,7 +79,10 @@ This theme, like WordPress, is licensed under the GPL.
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
-// @import "plugins/darklight";
+@import "plugins/darklight"; 
+@import "plugins/scrollToTop";
+// @import "plugins/langswitch";
+// @import "plugins/searchbar";
 
 /* Jetpack infinite scroll
 --------------------------------------------- */

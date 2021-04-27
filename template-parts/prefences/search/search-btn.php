@@ -1,7 +1,7 @@
 <?php
 defined( 'ABSPATH' ) || exit();
 ?>
-<button 
+<!-- <button 
     id="search" 
     class="btn btn-lg d-none" 
     onclick="switchLanguage()" 
@@ -10,8 +10,17 @@ defined( 'ABSPATH' ) || exit();
     >
     <span class="screen-reader-text">Search</span>
     <?php get_template_part( 'template-parts/svg/svg', 'search' ); ?>
-</button>
+</button> -->
 <!-- <form class="form-inline my-2 my-lg-0">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 </form> -->
+<div class="search-box">
+    <div class="searchform">
+        <input id="s" type="text" value="Search"/>    
+        <div class="close">
+            <span class="front"></span>
+            <span class="back"></span>
+        </div>   
+    </div>
+</div>
