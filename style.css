@@ -9777,7 +9777,7 @@ body.darklight-dark {
 }
 
 body.darklight-dark .container-bg-filter {
-	filter: grayscale(35%) sepia(35%) brightness(63%) hue-rotate(22deg) contrast(100%);
+	filter: grayscale(35%) sepia(35%) brightness(15%) hue-rotate(22deg) contrast(100%);
 }
 
 body.darklight-light {
@@ -9792,7 +9792,7 @@ body.darklight-light {
 }
 
 body.darklight-light .container-bg-filter {
-	filter: none;
+	filter: brightness(130%) blur(5px);
 }
 
 a, button {
@@ -9989,6 +9989,10 @@ h6 {
 	margin-bottom: 1.5rem;
 }
 
+p {
+	text-indent: 3rem;
+}
+
 .site-header {
 	font-size: 1rem;
 }
@@ -10024,7 +10028,6 @@ section {
 	position: relative;
 	min-height: 100vh;
 	width: 100vw;
-	padding-top: 6.25rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -10124,10 +10127,6 @@ section {
 	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
-}
-
-.container-bg-filter {
-	filter: grayscale(35%) sepia(35%) brightness(63%) hue-rotate(22deg) contrast(100%);
 }
 
 .button-group {
@@ -10358,11 +10357,31 @@ section#aboutus {
 	align-items: flex-start;
 }
 
+section#aboutus [role="tablist"] {
+	margin-top: 6.25rem;
+	flex-direction: column;
+}
+
+section#aboutus [role="tabpanel"] {
+	padding: 0;
+}
+
+section#aboutus [role="tabpanel"] .tab-content-inner {
+	margin-top: 6.25rem;
+}
+
 section#aboutus [data-toggle="pill"] {
 	margin: 1rem 0 0 0;
 	padding-right: 1rem;
 	display: flex;
 	flex-flow: row-reverse nowrap;
+	transition: all .5s ease-out;
+}
+
+section#aboutus [data-toggle="pill"] span {
+	display: block;
+	max-height: 2rem;
+	overflow: hidden;
 }
 
 section#aboutus [data-toggle="pill"]:before {
@@ -10380,6 +10399,7 @@ section#aboutus .active[data-toggle="pill"] {
 	padding-right: 0;
 	display: flex;
 	flex-flow: row-reverse nowrap;
+	transition: all .5s ease-out;
 }
 
 section#aboutus .active[data-toggle="pill"]:before {
@@ -10390,6 +10410,31 @@ section#aboutus .active[data-toggle="pill"]:before {
 	margin: -1rem -1rem -1rem -3rem;
 	background: var(--theme-color-main);
 	transition: all .5s ease-out;
+}
+
+@media screen and (max-width: 30rem) {
+	section#aboutus {
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	section#aboutus [role="tablist"] [data-toggle="pill"] {
+		width: 3rem;
+	}
+	section#aboutus [role="tablist"] [data-toggle="pill"]:hover {
+		width: 100%;
+	}
+	section#aboutus [role="tablist"] .active[data-toggle="pill"] {
+		width: 4rem;
+	}
+	section#aboutus [role="tablist"] .active[data-toggle="pill"] span {
+		display: none;
+	}
+	section#aboutus [role="tabpanel"] {
+		padding: 0;
+	}
+	section#aboutus [role="tabpanel"] .tab-content-inner {
+		padding-left: 5rem;
+	}
 }
 
 body::-webkit-scrollbar {

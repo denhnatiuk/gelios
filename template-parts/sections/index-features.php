@@ -1,5 +1,5 @@
+<h2 class="text-right" style="margin-right:3rem;"><span class="text-danger">Наші</span> переваги</h2>
 <section class="container" id="features">
-    <h2 class="text-right"><span class="text-danger">Наші</span> переваги</h2>
     <div class="row">
         <div class=" jumbotron col-12 col-sm-5 offset-sm-1 col-lg-3 offset-lg-1 aos-init aos-animate" data-aos="fade-up">
             <div class="icon text-primary align-self-end">
@@ -45,7 +45,7 @@
             </div>
             <h5>Терморежим</h5>
             <p class="text-muted mb-6 mb-md-0">
-            Відстежуємо терморежим вантажу в реальному часі.
+            Онлайн в реальному часі ми контролюємо дотримання терморежиму вантажу.
             </p>
         </div>
         <div class=" jumbotron col-12  col-sm-5 offset-sm-1 col-lg-3  offset-lg-1 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">

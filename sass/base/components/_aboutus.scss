@@ -1,11 +1,28 @@
 section#aboutus{
     justify-content: flex-start;
     align-items: flex-start;
+    & [role="tablist"]{
+        margin-top: 6.25rem;
+        // flex-direction: column-reverse;
+        flex-direction: column;
+    }
+    & [role="tabpanel"] {
+        padding:0;
+        .tab-content-inner{
+            margin-top: 6.25rem;
+        }
+    }
     & [data-toggle="pill"]{
         margin:1rem 0 0 0;
         padding-right:1rem;
         display: flex;
         flex-flow: row-reverse nowrap;
+        transition: all .5s ease-out;
+        span{
+            display: block;
+            max-height: 2rem;
+            overflow: hidden;
+        }
         &:before{
             content:"";
             display: block;
@@ -14,14 +31,15 @@ section#aboutus{
             margin:-1rem -1rem -1rem 0;
             background: var(--theme-color-main);
             transition: all .5s ease-out;
-
         }
     }
     & .active[data-toggle="pill"]{
+        // order:1;
         margin:1rem 0 0 0;
         padding-right: 0;
         display: flex;
         flex-flow: row-reverse nowrap;
+        transition: all .5s ease-out;
         &:before{
             content:"";
             display: block;
@@ -31,6 +49,37 @@ section#aboutus{
             // padding-right:3rem;
             background: var(--theme-color-main);
             transition: all .5s ease-out;
+        }
+    }
+}
+@media screen and (max-width:30rem) {
+    section#aboutus{
+        justify-content: flex-start;
+        align-items: flex-start;
+        & [role="tablist"]{
+            // flex-direction: column-reverse;
+            // flex-direction: column;
+            & [data-toggle="pill"]{
+                width:3rem;
+                
+                &:hover{
+                    width:100%;    
+                }
+            }
+            & .active[data-toggle="pill"]{
+                width:4rem;
+                // width:100%;
+                // order: 1;
+                span{
+                    display:none;
+                }
+            }
+        }
+        & [role="tabpanel"] {
+            padding:0;
+            .tab-content-inner{
+                padding-left:5rem;
+            }
         }
     }
 }

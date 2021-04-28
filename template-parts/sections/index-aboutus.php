@@ -1,7 +1,7 @@
 <?php
 ?>
 <section class="" id="aboutus">
-<div id="aboutus-pills-tab" class="nav flex-column align-flex-start col-md-3 col-xs-12 nav-pills" role="tablist" aria-orientation="vertical">
+<div id="aboutus-pills-tab" class="nav align-flex-start col-md-3 col-xs-12 nav-pills" role="tablist" aria-orientation="vertical">
   <a role="tab" data-toggle="pill" class="btn btn-shade shine active"  aria-selected="true"
         id="aboutus-pills-stats-tab"
         href="#aboutus-pills-stats" 
@@ -47,11 +47,9 @@
     <div class="container-fluid container-bg container-bg-cover container-bg-filter" style="
       background-image:url(<?php  echo get_template_directory_uri() ?>/assets/images/grow.jpg);"></div>
     <div class="row">
-      <div class="col-md-7 offset-md-3 col-xs-12 tab-content-inner">
-        <h3 class="text-center  "><span class="text-danger">Наші </span> показники</h3>
-        <p class="">
-          показники
-        </p>
+      <div class="col-md-8 offset-md-3 col-xs-12 tab-content-inner">
+        <h2 class="text-right "><span class="text-danger">Наші </span> показники</h2>
+        <?php get_template_part( 'template-parts/sections/part', 'numbers' );?>
       </div>
     </div>
   </div>
@@ -59,12 +57,13 @@
     id="aboutus-pills-history"
     aria-labelledby="aboutus-pills-history-tab">
     <div class="container-fluid  container-bg container-bg-cover container-bg-filter" style="
-      background-image:url(<?php  echo get_template_directory_uri() ?>/assets/images/history_cave.png);"></div>
+      background-image:url(<?php  echo get_template_directory_uri() ?>/assets/images/history_cave.jpg);"></div>
     <div class="row">
-      <div class="col-md-7 offset-md-3 col-xs-12 tab-content-inner">
-        <h3 class="text-center  "><span class="text-danger">Наша</span> історія успіху</h3>
+      <div class="col-md-8 offset-md-3 col-xs-12 tab-content-inner">
+        <h2 class="text-right   "><span class="text-danger">Наша</span> історія успіху</h2>
         <p class="">
-          Ми займались логістикою ще до того як це стало мейнстрімом.
+          Ми вже більше 17 років є надійним партнером найбільших підприємств України. Наш автопарк налічує понад 50 автомобілів з різними напівпричепами від ізотермічних до сучасних Рефрижиратор, здатних забезпечити будь-який необхідний температурний режим (від -25 до +25).
+          Ми займались логістикою ще до того як це стало мейнстрімом :)
         </p>
       </div>
     </div>
@@ -73,10 +72,10 @@
     id="aboutus-pills-achivements"
     aria-labelledby="aboutus-pills-achivements-tab">
     <div class="container-fluid  container-bg container-bg-cover container-bg-filter" style="
-      background-image:url(<?php  echo get_template_directory_uri() ?>/assets/images/awards_bg.png);"></div>
+      background-image:url(<?php  echo get_template_directory_uri() ?>/assets/images/awards_bg.jpg);"></div>
     <div class="row">
-      <div class="col-md-7 offset-md-3 col-xs-12 tab-content-inner">
-          <h3 class="text-center  "><span class="text-danger">Визнання </span> наших досягнень</h3>
+      <div class="col-md-8 offset-md-3 col-xs-12 tab-content-inner">
+          <h2 class="text-right  "><span class="text-danger">Визнання </span> наших досягнень</h2>
           <p class="">
             Ми займались логістикою ще до того як це стало мейнстрімом.
           </p>
@@ -87,10 +86,10 @@
     id="aboutus-pills-iso"
     aria-labelledby="aboutus-pills-iso-tab">
     <div class="container-fluid  container-bg container-bg-cover container-bg-filter" style="
-      background-image:url(<?php  echo get_template_directory_uri() ?>/assets/images/iso_bg.png);"></div>
+      background-image:url(<?php  echo get_template_directory_uri() ?>/assets/images/iso_bg1.jpg);"></div>
     <div class="row">
-    <div class="col-md-7 offset-md-3 col-xs-12 tab-content-inner">
-          <h3 class="text-center  "><span class="text-danger">Стандартизація </span>бізнес-процесів</h3>
+    <div class="col-md-8 offset-md-3 col-xs-12 tab-content-inner">
+          <h2 class="text-right  "><span class="text-danger">Стандартизація </span>бізнес-процесів</h2>
           <p class="">
             Ми працюємо за стандартами ISO 9001.
           </p>

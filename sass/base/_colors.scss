@@ -18,7 +18,7 @@ body{
         --theme-color-text: var(--brand-color-text);
         transition: all .5s ease-out;
         .container-bg-filter{
-            filter:  grayscale(35%) sepia(35%) brightness(63%) hue-rotate(22deg) contrast(100%);
+            filter:  grayscale(35%) sepia(35%) brightness(15%) hue-rotate(22deg) contrast(100%);
         }
     }
     &.darklight-light{
@@ -32,7 +32,7 @@ body{
         --theme-color-text: var(--brand-color-dark);
         transition: all .5s ease-out;
         .container-bg-filter{
-            filter:  none;
+            filter:  brightness(130%) blur(5px);
         }
     }
 }
