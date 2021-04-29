@@ -25,7 +25,7 @@
     width: 100%;
     min-height:6.75rem;
     z-index:10;
-    overflow:hidden;
+    // overflow:hidden;
     margin-top: -2rem;
     &:before,
     &:after{
@@ -52,14 +52,14 @@
     .cta-contact-form{
         position: absolute;
         z-index:2;
-        top:100%;
+        top:-12rem;
         transform: translate(400px, 400px);
         opacity:0;
         transition: .5s ease-in-out;
 
         &.active{
             top:0;
-            transform: translate(0, 0);
+            transform: translate(-3rem, -90%);
             opacity:1;
             transition: .5s ease-in-out;
         }

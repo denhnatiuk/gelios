@@ -4,13 +4,13 @@
         
         <li>
           <p class="left">
-            <label for="first_name">first name</label>
-            <input type="text" name="first_name" placeholder="John" />
+            <label for="name">Ваше Ім'я</label>
+            <input type="text" name="name" placeholder="Ваше Ім'я" />
           </p>
-          <p class="pull-right">
+          <!-- <p class="pull-right">
             <label for="last_name">last name</label>
             <input type="text" name="last_name" placeholder="Smith" />      
-          </p>
+          </p> -->
         </li>
         
         <li>
@@ -18,12 +18,18 @@
             <label for="email">email <span class="req">*</span></label>
             <input type="email" name="email" placeholder="john.smith@gmail.com" />
           </p>
+        </li> 
+        <li>
+          <p>
+            <label for="tel">Телефон <span class="req">*</span></label>
+            <input type="tel" name="tel" placeholder="+380123456789" />
+          </p>
         </li>        
         <li><div class="divider"></div></li>
-        <li>
+        <!-- <li>
           <label for="comments">comments</label>
           <textarea cols="46" rows="3" name="comments"></textarea>
-        </li>
+        </li> -->
         
         <li>
           <input class="btn btn-submit" type="submit" value="Submit" />
