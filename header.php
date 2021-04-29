@@ -66,7 +66,7 @@ defined( 'ABSPATH' ) || exit();
 					?>
 					<h1 class="brand-title">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<span class="brand-form">ТОВ</span>
+						<span class="brand-form">ПП</span>
 						<?php bloginfo( 'name' );?>
 					</a>
 				</h1>

@@ -1,6 +1,9 @@
 <?php
+
 ?>
+</main>
 <footer class="site-footer">
+    <?php get_template_part( 'template-parts/svg/svg', 'shapeRounded' );?>
     <div class="container">
         <div class="wp-column map">
 
@@ -61,20 +64,27 @@
       </ul>
     </div>
     <div class="footer__map" id="map">
-      <!--iframe
-        width="50%"
-        height="400"
-        frameborder="0" style="border:0"
-        src="https://www.google.com/maps/embed?data=!4m12!1m6!3m5!1s0x41201058bdafb979:0xe8376165a5df741a!2sZavodska+St!8m2!3d48.944567!4d38.479587!3m4!1s0x41201058bdafb979:0xe8376165a5df741a!8m2!3d48.944567!4d38.479587"
-        allowfullscreen>
-      </iframe -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2739.2772843254875!2d32.60196861514396!3d46.64103836216839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c41ab94bcb5949%3A0x14a4e124a07523d6!2sForshtadtska%20St%2C%2051%2C%20Kherson%2C%20Khersons&#39;ka%20oblast%2C%2073009!5e0!3m2!1sen!2sua!4v1619706834572!5m2!1sen!2sua" 
+      width="100%"
+      height="400"
+      loading="lazy"
+      frameborder="0" style="border:0"
+      allowfullscreen="true" 
+      loading="lazy"></iframe>
+      <!-- <iframe
 
+        style="border:0"
+      
+        src="https://www.google.com.ua/maps/place/Forshtadtska+St,+51,+Kherson,+Khersons'ka+oblast,+73009/@46.6410384,32.6019686,17z/data=!3m1!4b1!4m5!3m4!1s0x40c41ab94bcb5949:0x14a4e124a07523d6!8m2!3d46.6410347!4d32.6041573?hl=en"
+        allowfullscreen> -->
+      </iframe>
     </div>
   </div>
 
     </div>
-    <div class="fixed-stuff">
+    <!-- <div class="fixed-stuff">
       <button class="btn btn-default"></button>
-    </div>
+    </div> -->
     <?php wp_footer();?>
 </footer>

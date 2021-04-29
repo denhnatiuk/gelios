@@ -9822,6 +9822,8 @@ body {
 }
 
 #masthead .secondary-bar .prefences-navbar {
+	background: linear-gradient(to bottom, var(--theme-color-dark) 0%, var(--theme-color-shade) 5%, var(--theme-color-background) 50%, var(--theme-color-shade) 95%, var(--theme-color-dark) 100%);
+	background-repeat: repeat-x;
 	border-bottom: 3px solid var(--theme-color-shade);
 }
 
@@ -10322,6 +10324,10 @@ section {
 .bg-shape-bottom {
 	bottom: -10rem;
 	min-height: 4rem;
+}
+
+.bg-shape-rotated-180 {
+	transform: rotate(180deg);
 }
 
 /** Components*/
