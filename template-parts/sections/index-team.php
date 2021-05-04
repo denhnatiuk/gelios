@@ -28,7 +28,7 @@
                 <input type="radio" name="teammember" id="teammember<?php echo $key ?>">
                 <span> <?php echo $value?></span>
                 <div class="teammember-box">
-                    <img src="<?php  echo get_template_directory_uri() ?>/assets/images/team/lenazinskaya.png" alt="">
+                    <img src="<?php //echo get_template_directory_uri() ?>/assets/images/team/lenazinskaya.png" alt="">
                     <div class="teammember-contacts">
                         
                     </div>

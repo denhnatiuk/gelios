@@ -1,0 +1,461 @@
+============================================================================================
+|    Project Structure  
+============================================================================================
+Header
+    logo    =>
+            ? svg : png
+
+    menues  => 
+                page scroll menu
+
+                prefences menu
+                    dark-light theme switcher
+                    search bar
+                    switch language button
+                    scroll to top button (fixed bottom)
+Section 0:  Hero-Header  
+    h1 :
+        ua: Лідер ринку автомобільних вантажних перевезень в Україні
+        ru: Лидер рынка автомобильных грузоперевозок в Украине
+        en: Leader of the road freight market in Ukraine
+    img :
+        //? use parallax effect
+        bg: svg map of Ukraine
+        img: truck
+    call-to-action
+        button:details
+            onclick: scroll to About Us 
+            text:
+                ua: дізнатись більше
+                ru: подробнее
+                en: details
+
+        button:order-now-button 
+            onclick : show/hide form toggle switcher
+            text:
+                ua: замовити зараз
+                ru: заказать сейчас
+                en: order now
+        \
+        form:get-now-form                               ==> CF7 plugin shortcode
+            layout: modal on xs-sm, slide-fade on md-lg
+
+            => field: name
+            => field: tel
+            => field: email
+            //? re-capture v2                           ==> plugin re-capture v2 for CF7
+            ==> field: submit
+                //? solve on backend: 
+                //      - redirect message to gmail
+                //      - add to mailchimp for direct marketing
+                //      - add client to CRM
+    //? scroll-next button
+
+    //? page layout rythm shape => ? svg rounded to center
+
+Section 1   : About us
+    layout: 
+        tabs::
+            tab:
+                icon    :
+                text    :
+                    ua:
+                    ru:
+                    en:
+            tab-content:
+                background-image:
+                header:
+                    ua:
+                    ru:
+                    en:
+                content:
+                    ua:
+                    ru:
+                    en:
+
+    Section 1.1 : Stats
+        tab:
+            icon: graphic
+            text:
+                ua: Статистика
+                ru: Статистика
+                en: Statistics
+        tab-content:
+            background-image: grow.jpg
+            header:
+                ua: Наші показники
+                ru: Наши показатели
+                en: Our Stats
+            content:
+                number:         5 
+                    description:    
+                        ua:         років на ринку
+                        ru:         лет на рынке
+                        en:         years on market
+                number:         1250+ 
+                    description:    
+                        ua:         перевезень на місяць
+                        ru:         перевозок в месяц
+                        en:         deliveries per month
+                number:         25 
+                    description:    
+                        ua:         машин в автопарку
+                        ru:         машин в автопарке
+                        en:         trucks in autopark
+                number:         150 
+                    description:    
+                        ua:         постійних клієнтів
+                        ru:         постоянных клиентов
+                        en:         regular customers
+                number:         375+ 
+                    description:    
+                        ua:         угод на LardiTrans
+                        ru:         сделок на LardiTrans
+                        en:         contracts on LardiTrans               
+                number:         24/7
+                    description:    
+                        ua:         працюємо non-stop
+                        ru:         работаем non-stop
+                        en:         working  non-stop
+
+    Section 1.2 : History
+        tab:
+            icon: book
+            text:
+                ua: Історія 
+                ru: История
+                en: History
+        tab-content:
+            background-image: history_cave.jpg
+            header:
+                ua: Наша історія успіху
+                ru: Наша история успеха
+                en: Our Success Story
+            content:
+                ua: 
+                ru: 
+                en: 
+
+    Section 1.3 : Achivements
+        tab:
+            icon: awards
+            text:
+                ua: Досягнення
+                ru: История
+                en: History
+        tab-content:
+            background-image: history_cave.jpg
+            header:
+                ua: Наші досягнення
+                ru: Наши достижения
+                en: Our Achivements
+            content:
+                ua: 
+                ru: 
+                en: 
+
+    Section 1.4 : ISO 9001
+        tab:
+            icon: iso
+            text:
+                ua: Сертифікація ISO 9001
+                ru: Сертификация ISO 9001
+                en: History
+        tab-content:
+            background-image: history_cave.jpg
+            header:
+                ua: Стандартизація бізнес-процесів
+                ru: Стандартизация бизнес-процесов
+                en: Standards of business processes
+            content:
+                ua: 
+                ru: 
+                en: 
+
+
+Section 2   : Features
+    layout: jumbotrons 
+        //? xs-layout accordion || hide some of features on small screen
+    
+    content:
+
+        1:: 
+            icon    : truck-timer
+            header  : 
+                ua: Завжди в строк
+                ru: Всегда вовремя
+                en: Just In Time
+            text    :
+                ua: Однією з ключових наших переваг є дотримання встановлених строків. Адже час це гроші, чи не так.
+                ru: Одним из ключевых наших преимуществ является соблюдение установленных сроков. Ведь время это деньги, не так ли.
+                en: One of our key advantages is complience with deadlines. After all, time is money, isn't it.
+    
+        2:: 
+            icon    : scales
+            header  : 
+                ua: Ціну збалансовано
+                ru: Цена сбалансирована
+                en: Price Is Balenced 
+            text    :
+                ua: Наша цінова політика завжди будується в балансі ціни і якості. Стабільні багаторічні контракти дають нам змогу балансувати ціну перевезень.
+                ru: Наша ценовая политика всегда строится в балансе цены и качества. Стабильные многолетние контракты дают нам возможность балансировать цену перевозок.
+                en: Our pricing policy is always based on a balance of price and quality. Stable long-term contracts allow us to balance the price of transportation.
+        
+        3:: 
+            icon    : truck-arrow
+            header  : 
+                ua: Власний автопарк
+                ru: 
+                en: 
+            text    :
+                ua: Із року в рік ми збільшуємо і оновлюємо власний автопарк, щоб гарантовано забезпечити для вас найкращі умови перевезення.
+                ru: Из года в год мы увеличиваем и обновляем свой автопарк, чтобы гарантированно обеспечить для вас лучшие условия перевозки.
+                en: From year to year we increase and update our fleet to ensure the best possible transportation conditions for you.
+        
+        4:: 
+            icon    : rewinding-arrows
+            header  : 
+                ua: Кругорейси
+                ru: Кругорейсы
+                en: Round Trips
+            text    :
+                ua: Найкращі ціни для клієнтів з постійними кругорейсами.
+                ru: Лучшие цены для клиентов с постоянными Кругорейс.
+                en: The best prices for customers with regular flights.
+        
+        5:: 
+            icon    : termometer
+            header  : 
+                ua: Терморежим
+                ru: Терморежим
+                en: Thermal mode
+            text    :
+                ua: Онлайн в реальному часі ми контролюємо дотримання терморежиму вантажу.
+                ru: Онлайн в реальном времени мы контролируем соблюдение терморежиму груза.
+                en: Online in real time we monitor compliance with the thermal regime of the cargo.
+        
+        6:: 
+            icon    : safe-buoy
+            header  : 
+                ua: Траблшутінг
+                ru: Траблшутинг
+                en: Troubleshooting
+            text    :
+                ua: Спеціальна мобільна група вирішує проблеми що можуть трапитись в дорозі.
+                ru: Специальная мобильная группа решает проблемы которые могут случиться в дороге.
+                en: A special mobile group solves problems that may occur on the road.
+
+        // more possible variants
+
+            |   GPS-трекинг грузов
+            |       Мы одни из первых на украинском рынке внедрили технологию GPS-трекинга нашего транспорта. Теперь можно не беспокоиться, что груз где-то застрял в пути, ведь в любой момент времени 24/7 можно отследить его передвижение.
+            |   температурный режим
+            |       Весь наш транспорт оснащён датчиками температуры, что позволяет нам контролировать температуру груза онлайн и поддерживать нужный режим не зависимо от погодных условий.
+            |   быстрая доставка
+            |       Наши менеджеры по логистике всегда расчитывают оптимальные маршруты доставки, что гарантирует скорость перемещения Ваших грузов на склады грузополучателей.
+            |   качественная перевозка
+            |       Современный транспорт и поддержание его надлежащего технического состояния являются ключевыми нашими приоритетами, потому даже в условиях некачественного дорожного покрытия Вы можете быть спокойны за целостность Вашего груза.
+            |   Cбалансированная цена
+            |       Наша ценовая политика всегда строится в балансе цены и качества. Мы понимаем, что конечная цена вашего продукта будет зависеть и от стоимости оказаных нами услуг и потому всегда ориентируемся на взаимовыгодные условия.
+            |   Опытные сотрудники
+            |       Наши сотрудники много лет трудятся в своей отрасли и в своей профессиональной деятельности сталкивались с множеством экстраординарных ситуаций, что помогает им быстро находить решение в любой непредвиденной ситуации.
+
+
+
+Section 3   : Team
+    layout: tabs
+        //? vertical accordion 
+        //? Carousel
+
+        tab layout:
+                Name:
+                    ua: 
+                    ru: 
+                    en: 
+                Position:
+                    ua: 
+                    ru: 
+                    en: 
+                Photo: 1080x1080
+                Contacts:
+                    button:add-to-Contacts
+                    button:show-QR-code
+
+                    tel     :   +380
+                    email   :   @geliostrans.com
+                    viber   :   viber://
+                    telegram:   https://t.me/
+                    //?skype   :
+                    //twitter :
+                    //facebook:
+                    //instagram:
+
+                QR-Code:
+
+    content:
+
+        0::
+            Name: 
+                ua: Олександр Стріжов
+                ru: Александр Стрижов
+                en: Oleksandr Strizhov
+            Position:
+                ua: директор
+                ru: директор
+                en: director
+            Photo:      img:
+            Contacts:
+                tel     :   +380 66 195 5200
+                email   :   director@geliostrans.com
+                viber   :   viber://
+                telegram:   https://t.me/
+
+            QR-Code:    img:
+    
+        1::
+            Name: 
+                ua: Валентина Рєпа
+                ru: Валентина Репа
+                en: Valentina Repa
+            Position:
+                ua: бухгалтер
+                ru: бухгалтер
+                en: accountant
+            Photo:      img:
+            Contacts:
+                tel     :   +380 50 968 2088
+                email   :   accountant@geliostrans.com
+                viber   :   viber://
+                telegram:   https://t.me/
+
+            QR-Code:    img:
+        2::
+            Name: 
+                ua: Олена Зінська
+                ru: Елена Зинская
+                en: Olena Zinskaya
+            Position:
+                ua: диспетчер
+                ru: диспетчер
+                en: dispatcher
+            Photo:      img:
+            Contacts:
+                tel     :   +380 99 282 2291
+                email   :   lenazinskaya@geliostrans.com
+                viber   :   viber://
+                telegram:   https://t.me/
+
+            QR-Code:    img:
+
+        3::
+            Name: 
+                ua: Юлія Кантур
+                ru: Юлия Кантур
+                en: Julia Kantur
+            Position:
+                ua: диспетчер
+                ru: диспетчер
+                en: dispatcher
+            Photo:      img:
+            Contacts:
+                tel     :   +380 99 462 1014
+                email   :   juliakantur@geliostrans.com
+
+                viber   : 
+                telegram:
+
+            QR-Code:    img:
+        
+        4::
+            Name: 
+                ua: Андрій Медведь
+                ru: Андрей Медведь
+                en: Andriy Medved
+            Position:
+                ua: траблшутер
+                ru: траблшутер
+                en: Troubleshooter
+            Photo:      img:
+            Contacts:
+                tel     :   +380
+                email   :   @geliostrans.com
+                viber   :   viber://
+                telegram:   https://t.me/
+
+            QR-Code:    img:
+        5::
+            Name: 
+                ua: Анна Філатова
+                ru: Анна Филатова
+                en: Anna Filatova
+            Position:
+                ua: диспетчер
+                ru: диспетчер
+                en: dispatcher
+            Photo:      img:
+            Contacts:
+                tel     :   +380661698024
+                email   :   annafilatova@geliostrans.com
+
+                viber   :   viber://
+                telegram:   https://t.me/
+
+            QR-Code:    img:
+        6::
+            Name: 
+                ua: Наталія Малахова
+                ru: Наталія Малахова
+                en: Natali Malakhova
+            Position:
+                ua: диспетчер
+                ru: диспетчер
+                en: dispatcher
+            Photo:      img:
+            Contacts:
+                tel     :   +380 66 292 6146
+                email   :   natalimalakhova@geliostrans.com
+
+                viber   :   viber://
+                telegram:   https://t.me/
+
+            QR-Code:    img:
+
+Section 4   : Clients
+    layout: Carousel
+        //? vertical accordion 
+        //? Carousel
+
+        tab layout:
+
+Section 5   : News
+
+    layout: Jumbotron Carousel
+    
+    content layout:
+        header:
+            ua:
+            ru:
+            en:
+        hero-image: img:sizes 1920 X 680
+        thumbnail:  img:sizes 1080 X 1080
+            //? multiple thumbnails
+        main text markup :
+            ua:
+            ru:
+            en:
+
+Footer:
+
+    Company Contacts:
+        Legal Address   :
+        Office          :
+        Tel             :
+        Email           : info@geliostrans.com
+
+    Map-Marker:
+    
+    Footer-menu:
+        Privacy Policy  : GDPR
+        Copyrights      : (c) All rights reserved.
+        Created by      : DenHnatiuk https://
+

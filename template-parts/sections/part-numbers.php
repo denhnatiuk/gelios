@@ -3,12 +3,12 @@
 <div class="container">
     <div class="row about-numbers  text-right">
         <div class="col-xs-6 col-sm-4 offset-sm-1 col-md-2">
-            <h3 class="about-numbers__count">5</h3>
-            <p class="about-numbers__text">років<br>на ринку</p>
+            <h3 class="about-numbers__count">2012</h3>
+            <p class="about-numbers__text">рік<br>заснування</p>
         </div>
         <div class="col-xs-6 col-sm-4 offset-sm-1 col-md-2">
-            <h3 class="about-numbers__count">1250+</h3>
-            <p class="about-numbers__text">перевезень<br>на місяць</p>
+            <h3 class="about-numbers__count">64 млн</h3>
+            <p class="about-numbers__text">перевезень<br>в 2018 році</p>
         </div>
         <div class="col-xs-6 col-sm-4 offset-sm-1 col-md-2">
             <h3 class="about-numbers__count">25</h3>
