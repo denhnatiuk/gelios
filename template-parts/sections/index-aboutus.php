@@ -48,7 +48,7 @@
       background-image:url(<?php  echo get_template_directory_uri() ?>/assets/images/grow.jpg);"></div>
     <div class="row">
       <div class="col-md-8 offset-md-3 col-xs-12 tab-content-inner">
-        <h2 class="text-right "><span class="text-danger">Наші </span> показники</h2>
+        <h2 class="text-right "><span class="text-danger">Ключові </span> показники</h2>
         <?php get_template_part( 'template-parts/sections/part', 'numbers' );?>
       </div>
     </div>
@@ -81,9 +81,16 @@
     <div class="row">
       <div class="col-md-8 offset-md-3 col-xs-12 tab-content-inner">
           <h2 class="text-right  "><span class="text-danger">Визнання </span> наших досягнень</h2>
-          <p class="">
-            Ми займались логістикою ще до того як це стало мейнстрімом.
-          </p>
+          <div class="row">
+            <div class="col-sm-6 col-xs-12">
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/leader2020.png" alt="" class=" img">
+            </div>
+            <div class="col-sm-6 col-xs-12">
+              <p class="">
+                Наше підприємство отримало нагороду "Лідер Галузі 2020 року"
+              </p>
+            </div>
+          </div>
       </div>
     </div>
   </div>
@@ -95,9 +102,16 @@
     <div class="row">
     <div class="col-md-8 offset-md-3 col-xs-12 tab-content-inner">
           <h2 class="text-right  "><span class="text-danger">Стандартизація </span>бізнес-процесів</h2>
-          <p class="">
-            Ми працюємо за стандартами ISO 9001.
-          </p>
+          <div class="row">
+            <div class="col-sm-6 col-xs-12">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/cert_iso.jpg" alt=""  class=" img">
+            </div>
+            <div class="col-sm-6 col-xs-12">
+              <p class="">
+                Підприємство отримало сертифікат ISO 9001:2015 (Системи управління якістю)
+              </p>
+            </div>
+          </div>
       </div>
     </div>
   </div>

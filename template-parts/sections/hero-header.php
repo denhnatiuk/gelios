@@ -13,19 +13,36 @@
 <section class="hero-header container" style="">
   <?php get_template_part( 'template-parts/svg/svg', 'map' ); ?>
   <div class="row  align-items-center justify-content-between">        
-    <div class="col-xs-12 col-md-4">
-        <h2><span class="text-danger">Лідер ринку</span><br/> автомобільних вантажних перевезень в Україні</h2>
-              
+    <div class="col-xs-12 col-md-4 d-flex">
+        <h2><span class="text-danger">Ваш надійний партнер</span><br/> на ринку автомобільних вантажних перевезень в Україні</h2>
     </div>
-    <div class="col-xs-12 col-md-6" >       
-        <img src="<?php echo get_template_directory_uri() ?>/assets/images/herotruck.png" alt="truck" class=" image-back-blob">
-        
+    <div class="col-xs-12 col-md-6 d-flex" >  
+        <img src="<?php echo get_template_directory_uri() ?>/assets/images/herotruck.png" alt="truck" class=" image-back-blob" loading="lazy">
+        <div class="quality text-primary d-flex flex-column">
+          <script>
+            
+          </script>
+          <button type="button" data-toggle="modal" 
+            class="quality-icon" 
+            id="isoModalLabel"
+            data-target="#isoModal">
+            <span class="icon"><?php get_template_part( 'template-parts/svg/svg', 'iso' );?></span>
+          </button>
+          <?php get_template_part( 'template-parts/modals/modal', 'iso' );?>
+          <button type="button" class="quality-icon"
+            onclick="scrollToTab('aboutus-pills-achivements-tab','aboutus')"
+          >
+            <span class="icon"><?php get_template_part( 'template-parts/svg/svg', 'leaderRate' );?></span>
+          </button>
+          <?php get_template_part( 'template-parts/modals/modal', 'rate2020' );?>
+        </div>     
     </div>        
     <div class="cta container-fluid">
       <div class="row">
+
         <div class="button-group col-xs-12 col-md-5">
             <button type="button" class="btn btn-lg btn-secondary shine"
-              onclick="document.getElementById('aboutus').scrollIntoView({block: 'end',behavior: 'smooth'});">дізнатись більше</button>
+              onclick="scrollToTab('aboutus-pills-history-tab','aboutus')">дізнатись більше</button>
             <button type="button" class="btn btn-lg btn-success shine" onclick="getElementById('heroContact').classList.toggle('active')">замовити зараз 
                 <div class="badge icon text-primary">
                     <?php get_template_part( 'template-parts/svg/svg', 'goon' );?>

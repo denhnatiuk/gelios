@@ -125,6 +125,26 @@ header.fixed-top-bar{
         margin-top:0;
         margin-bottom: 3rem;
     }
+    .quality{
+        width:4rem;
+        height:auto;
+        .quality-icon{
+            .icon {
+                width:4rem;
+                height:auto;
+                svg{
+                    width:4rem;
+                    height:auto;
+                    fill:var(--theme-color-shade);
+                    
+                }
+                &:hover svg{
+                    fill:var(yellow);
+                }
+            }
+        }
+        
+    }
 }
 .cta{
     svg{
@@ -208,3 +228,12 @@ header.fixed-top-bar{
   header .nav-link.shine:hover{
       border-bottom: 2px solid var(--theme-color-main);
   }
+@media screen and (max-width:600px) {
+    html{
+        font-size:14px;
+    }
+    .hero-header h2{
+        margin-top:6rem;
+        margin-bottom:-3rem;
+    }
+}

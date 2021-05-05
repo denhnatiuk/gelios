@@ -1,3 +1,9 @@
+// scrollIntoView to tab button
+function scrollToTab(tab, tabcontent){
+    document.getElementById(tab).click();
+    document.getElementById(tabcontent).scrollIntoView({block: 'end',behavior: 'smooth'})
+}
+
 function setCookie(cname, cvalue, minutes) {
     var d = new Date();
     d.setTime(d.getTime() + (minutes*60*1000 || year));

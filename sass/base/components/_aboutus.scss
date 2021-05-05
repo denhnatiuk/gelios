@@ -1,6 +1,15 @@
 section#aboutus{
     justify-content: flex-start;
     align-items: flex-start;
+    p{
+        font-size: 1rem;
+        line-height:1.5rem;
+        text-indent:0;
+        font-weight: bold;
+    }
+    .img{
+        max-width:18.75rem;
+    }
     & [role="tablist"]{
         margin-top: 6.25rem;
         // flex-direction: column-reverse;

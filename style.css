@@ -5,7 +5,7 @@ Theme URI: https://github.com/DenysHnatiuk/cv/
 Author: Den Hnatiuk 
 Author URI: https://denyshnatiuk.github.io/geliostrans/
 Description: Description
-Version: 1.0.0
+Version: 1.0.1
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -10009,6 +10009,12 @@ nav ul li {
 	margin: 0 1rem;
 }
 
+@media screen and (max-width: 1200px) {
+	html {
+		font-size: 14px;
+	}
+}
+
 /** Elements*/
 *,
 *::before,
@@ -10367,6 +10373,17 @@ section#aboutus {
 	align-items: flex-start;
 }
 
+section#aboutus p {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	text-indent: 0;
+	font-weight: bold;
+}
+
+section#aboutus .img {
+	max-width: 18.75rem;
+}
+
 section#aboutus [role="tablist"] {
 	margin-top: 6.25rem;
 	flex-direction: column;
@@ -10528,7 +10545,6 @@ header.fixed-top-bar .primary-bar .site-branding .brand-title, header.fixed-top-
 
 header.fixed-top-bar .primary-bar .site-branding .brand-title .brand-form, header.fixed-top-bar .primary-bar .site-branding .site-title .brand-form {
 	color: var(--theme-color-main);
-	font-size: 1.25rem;
 }
 
 header.fixed-top-bar .primary-bar .site-branding .site-description {
@@ -10574,6 +10590,26 @@ header.fixed-top-bar .primary-bar .site-branding .site-description {
 .hero-header h2 {
 	margin-top: 0;
 	margin-bottom: 3rem;
+}
+
+.hero-header .quality {
+	width: 4rem;
+	height: auto;
+}
+
+.hero-header .quality .quality-icon .icon {
+	width: 4rem;
+	height: auto;
+}
+
+.hero-header .quality .quality-icon .icon svg {
+	width: 4rem;
+	height: auto;
+	fill: var(--theme-color-shade);
+}
+
+.hero-header .quality .quality-icon .icon:hover svg {
+	fill: var(yellow);
 }
 
 .cta svg .svg-arr {
@@ -10642,6 +10678,27 @@ header.fixed-top-bar .primary-bar .site-branding .site-description {
 
 header .nav-link.shine:hover {
 	border-bottom: 2px solid var(--theme-color-main);
+}
+
+@media screen and (max-width: 600px) {
+	html {
+		font-size: 14px;
+	}
+	.hero-header h2 {
+		margin-top: 6rem;
+		margin-bottom: -3rem;
+	}
+}
+
+#isoModal .modal-header {
+	z-index: 1000;
+	border-bottom: 0;
+	margin-bottom: -3rem;
+}
+
+#contacts ul {
+	list-style-type: none;
+	padding: 0;
 }
 
 body.darklight-light #darklight {
