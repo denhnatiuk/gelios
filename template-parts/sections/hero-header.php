@@ -16,12 +16,9 @@
     <div class="col-xs-12 col-md-4 d-flex">
         <h2><span class="text-danger">Ваш надійний партнер</span><br/> на ринку автомобільних вантажних перевезень в Україні</h2>
     </div>
-    <div class="col-xs-12 col-md-6 d-flex" >  
+    <div class="col-xs-12 col-md-6 d-flex flex-xs-wrap flex-md-nowrap" >  
         <img src="<?php echo get_template_directory_uri() ?>/assets/images/herotruck.png" alt="truck" class=" image-back-blob" loading="lazy">
-        <div class="quality text-primary d-flex flex-column">
-          <script>
-            
-          </script>
+        <div class="quality text-primary d-flex flex-xs-row flex-md-column">
           <button type="button" data-toggle="modal" 
             class="quality-icon" 
             id="isoModalLabel"

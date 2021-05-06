@@ -10371,6 +10371,7 @@ section {
 section#aboutus {
 	justify-content: flex-start;
 	align-items: flex-start;
+	position: relative;
 }
 
 section#aboutus p {
@@ -10385,16 +10386,27 @@ section#aboutus .img {
 }
 
 section#aboutus [role="tablist"] {
-	margin-top: 6.25rem;
+	position: absolute;
+	top: 6.25rem;
+	left: 0;
+	z-index: 100;
 	flex-direction: column;
 }
 
 section#aboutus [role="tabpanel"] {
-	padding: 0;
+	padding: 6.25rem 4 rem;
+	min-height: 100vh;
 }
 
 section#aboutus [role="tabpanel"] .tab-content-inner {
 	margin-top: 6.25rem;
+}
+
+section#aboutus .tab-content {
+	position: relative;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
 }
 
 section#aboutus [data-toggle="pill"] {
@@ -10686,7 +10698,7 @@ header .nav-link.shine:hover {
 	}
 	.hero-header h2 {
 		margin-top: 6rem;
-		margin-bottom: -3rem;
+		margin-bottom: -2rem;
 	}
 }
 
@@ -10870,6 +10882,24 @@ body.darklight-dark #darklight:before {
 	transform: translate(-3rem, -90%);
 	opacity: 1;
 	transition: .5s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+	.cta .row {
+		flex-flow: column-reverse;
+	}
+	.cta-form-wrapper:before, .cta-form-wrapper:after {
+		display: none;
+	}
+}
+
+.grecaptcha-badge {
+	display: none;
+	visibility: hidden;
+	z-index: -1;
+	margin-right: -10rem;
+	width: 0;
+	height: 0;
 }
 
 /*--------------------------------------------------------------

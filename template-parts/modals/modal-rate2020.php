@@ -1,6 +1,6 @@
 <?php 
 ?>
-<div class="modal fade" role="dialog" aria-hidden="true" tabindex="-1" 
+<!-- <div class="modal fade" role="dialog" aria-hidden="true" tabindex="-1" 
   aria-labelledby="leaderRateModalLabel" 
   id="leaderRateModal" >
   <div class="modal-dialog" role="document">
@@ -13,7 +13,7 @@
       <div class="modal-body">
         <img src="<?php //echo get_template_directory_uri() ?>/assets/images/cert_iso.jpg" alt=""  class=" img img-fluid">
       </div>
-      <!-- <div class="modal-footer"></div> -->
+      <div class="modal-footer"></div>
     </div>
   </div>
-</div>
+</div> -->

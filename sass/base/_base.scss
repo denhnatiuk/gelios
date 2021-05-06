@@ -68,7 +68,26 @@
     }
 }
 
+@media screen and (max-width:768px) {
+    
+    .cta .row{
+        flex-flow: column-reverse;
+    }
+    .cta-form-wrapper{
+        &:before,
+        &:after{
+            display:none;
+        }
+    }
+    section#aboutus{}
+}
 
-
-
+.grecaptcha-badge{
+    display:none;
+    visibility:hidden;
+    z-index:-1;
+    margin-right:-10rem;
+    width:0;
+    height:0;
+}
 

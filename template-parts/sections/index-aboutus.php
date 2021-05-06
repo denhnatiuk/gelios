@@ -39,9 +39,9 @@
     <span>Сертифікація ISO 9001</span>
   </a>
 </div>
-<div class="tab-content container-bg" 
+<div class="tab-content" 
     id="aboutus-pills-tabContent">
-  <div role="tabpanel" class="tab-pane container-fluid bg-container fade show active" 
+  <div role="tabpanel" class="tab-pane bg-container fade show active" 
     id="aboutus-pills-stats"
     aria-labelledby="aboutus-pills-stats-tab">
     <div class="container-fluid container-bg container-bg-cover container-bg-filter" style="
@@ -53,7 +53,7 @@
       </div>
     </div>
   </div>
-  <div role="tabpanel" class="tab-pane container-fluid bg-container fade" 
+  <div role="tabpanel" class="tab-pane bg-container fade" 
     id="aboutus-pills-history"
     aria-labelledby="aboutus-pills-history-tab">
     <div class="container-fluid  container-bg container-bg-cover container-bg-filter" style="
@@ -73,7 +73,7 @@
       </div>
     </div>
   </div>
-  <div role="tabpanel" class="tab-pane container-fluid bg-container fade" 
+  <div role="tabpanel" class="tab-pane bg-container fade" 
     id="aboutus-pills-achivements"
     aria-labelledby="aboutus-pills-achivements-tab">
     <div class="container-fluid  container-bg container-bg-cover container-bg-filter" style="
@@ -94,7 +94,7 @@
       </div>
     </div>
   </div>
-  <div role="tabpanel" class="tab-pane container-fluid bg-container fade" 
+  <div role="tabpanel" class="tab-pane bg-container fade" 
     id="aboutus-pills-iso"
     aria-labelledby="aboutus-pills-iso-tab">
     <div class="container-fluid  container-bg container-bg-cover container-bg-filter" style="

@@ -1,6 +1,7 @@
 section#aboutus{
     justify-content: flex-start;
     align-items: flex-start;
+    position: relative;
     p{
         font-size: 1rem;
         line-height:1.5rem;
@@ -11,15 +12,27 @@ section#aboutus{
         max-width:18.75rem;
     }
     & [role="tablist"]{
-        margin-top: 6.25rem;
+        
+        position: absolute;
+        top: 6.25rem;
+        left:0;
+        z-index:100;
+        // margin-top: 6.25rem;
         // flex-direction: column-reverse;
         flex-direction: column;
     }
     & [role="tabpanel"] {
-        padding:0;
+        padding: 6.25rem 4 rem;
+        min-height:100vh;
         .tab-content-inner{
             margin-top: 6.25rem;
         }
+    }
+    .tab-content{
+        position: relative;
+        width:100vw;
+        margin:0;
+        padding:0;        
     }
     & [data-toggle="pill"]{
         margin:1rem 0 0 0;
@@ -65,7 +78,9 @@ section#aboutus{
     section#aboutus{
         justify-content: flex-start;
         align-items: flex-start;
+
         & [role="tablist"]{
+
             // flex-direction: column-reverse;
             // flex-direction: column;
             & [data-toggle="pill"]{
@@ -84,6 +99,7 @@ section#aboutus{
                 }
             }
         }
+
         & [role="tabpanel"] {
             padding:0;
             .tab-content-inner{
