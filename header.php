@@ -79,7 +79,7 @@ defined( 'ABSPATH' ) || exit();
 					endif; 
 				?>
 			</div>
-			<nav id="landingNav" class="main-navigation">
+			<nav id="landingNav" class="main-navigation  navbar-expand-sm">
 				<button 
 					class="navbar-toggler menu-toggle btn-skew-sm" 
 					type="button" 
