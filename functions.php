@@ -18,6 +18,9 @@ $gelios_inc_array = array(
 		'/setup.php'                           // Theme setup.
 		,'/theme-settings.php'                 // Theme settings.
 		,'/enqueue.php'                         // Enqueue scripts and styles.
+		,'/darklight/darklight.php'
+		,'/gelios/gelios.php'
+		,'/gutenberg-examples/index.php'
 	//	,'/template-tags.php'                   // Custom template tags for this theme.
 	//	,'/pagination.php'                      // Custom pagination for this theme.
 	//	,'/hooks.php'                           // Custom hooks.
@@ -42,4 +45,11 @@ foreach ( $gelios_inc_array as $gelios_inc ) {
 
 
 
- 
+  /**
+ * Возможность загружать SVG
+ */
+function utk_myme_types($mime_types){
+	$mime_types['svg'] = 'image/svg+xml'; // поддержка SVG
+	return $mime_types;
+}
+add_filter('upload_mimes', 'utk_myme_types', 1, 1);

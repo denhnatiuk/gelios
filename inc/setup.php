@@ -6,6 +6,8 @@
  * @scince version 0.0.1
  * 
 */
+defined( 'ABSPATH' ) || exit();
+
 add_action( 'after_setup_theme', 'gelios_setup' );
 if ( ! function_exists( 'gelios_setup' ) ) :
 	function gelios_setup() {

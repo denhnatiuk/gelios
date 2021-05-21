@@ -1,0 +1,15 @@
+{
+	"apiVersion": 2,
+	"name": "gelios/gelios",
+	"title": "Gelios",
+	"category": "design",
+	"icon": "smiley",
+	"description": "Gelios",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "gelios",
+	"editorScript": "./build/index.js",
+	"editorStyle": "./build/index.css",
+	"style": "./build/style-index.css"
+}

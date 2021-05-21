@@ -1,0 +1,18 @@
+{
+  "files.autoSave": "onFocusChange",
+  "editor.fontSize": 16,
+  "telemetry.enableCrashReporter": false,
+  "workbench.preferredLightColorTheme": "Visual Studio Dark",
+  "workbench.sideBar.location": "left",
+  "files.exclude": {
+    "**/.DS_Store": false,
+    "**/.git": false,
+    "**/.hg": false,
+    "**/.svn": false,
+    "**/CVS": false
+  },
+  "editor.accessibilityPageSize": 12,
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.snippetSuggestions": "bottom",
+  "workbench.iconTheme": "vs-minimal"
+}
