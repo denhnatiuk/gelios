@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="100" src="./Screenshot.png" alt="Gelios logo" align="left" />
+  <img width="100" src="https://raw.githubusercontent.com/DenysHnatiuk/gelios/main/screenshot.png" alt="Gelios logo" align="left" />
   <h1>Gelios WordPress Theme</h1>  
 </p>
 <p align="center">
