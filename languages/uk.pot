@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
-"Report-Msgid-Bugs-To: https://github.com/DenysHnatiuk/gelios/issues\n"
+"Report-Msgid-Bugs-To: https://github.com/DenysHnatiuk/gelios/docs/issues\n"
 "Last-Translator: Den Hnatiuk <denys.hnatiuk@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
